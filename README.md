@@ -7,7 +7,7 @@ Meetings are held each Wednesday from 7:00 PM - 8:00 PM MST, currently through Z
 The purpose for these weekly training meetings is to prepare for monthly CTF (Capture the Flag) competitions that we will be participating in. A link to a Google Sheet to sign up for these monthly competitions is found below. Teams can normally have up to 4 people, so in the sign up sheet, you can join a team with less than 4 people, or start your own team. You can even do it solo, but it's much more difficult and stressful. 
 
 ## Beginners
-New to CTFs? Not sure how to start? Our first lesson focuses on how CTFs work, some basic skills, and how to get access to a Linux environment. As the weeks progress, we will focus on more specific skills or reviewing past CTF challenges. Look at [Week 1 - Introduction to CTFs](tree/main/Lesson%201%20-%20Introduction%20to%20CTFs) to get started!
+New to CTFs? Not sure how to start? Our first lesson focuses on how CTFs work, some basic skills, and how to get access to a Linux environment. As the weeks progress, we will focus on more specific skills or reviewing past CTF challenges. Look at [Week 1 - Introduction to CTFs](https://github.com/JustinApplegate/ctf-training/tree/main/Lesson%201%20-%20Introduction%20to%20CTFs) to get started!
 
 # Resources
 ## Zoom Details
