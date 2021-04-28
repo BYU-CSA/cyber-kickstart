@@ -9,14 +9,20 @@ What do you want to learn? We've already included a list of [future topics](http
 
 We've also created a link to a survey where you can let us know what you want to learn: `<insert link here>`
 
+# Technical Topics
 ## Linux
-When it comes to cybersecurity and CTF competitions, having access to a Linux environment is at the very least super helpful, if not essential. There are several tools that have not been written for use in a Windows environment. So if you use Windows, what are your options??
+When it comes to cybersecurity and CTF competitions, having access to a Linux environment is at the very least super helpful, if not essential. There are several tools that have not been written for use in a Windows environment. So, what are your options??
 
 * WSL
 * Virtual machine
 * Dual-boot
 
-## External Resources
+## LSB
+This is a common steganography tool used to hide data (text, black+white photos, color photos) in bits of an image. Look at the LSB Steganography.pptx file to learn about *HOW* LSB steg works. Then, look at some of the examples:
+
+[Ian fills in examples here]
+
+# External Resources
 Are you so in love with cybersecurity and CTFs that you want to increase your skills outside of class? Here's a list of resources that you can access to learn on your own! If there are others that you're aware of, let us know in the Slack workspace, and we'll add it here! 
 
 * [CTFtime](https://ctftime.org/event/list/upcoming)
