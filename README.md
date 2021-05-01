@@ -22,7 +22,5 @@ If you're interested in using other resources outside of the ones we go through,
 https://byu.zoom.us/j/92020397426
 Meeting ID: 920 2039 7426
 
-As of right now, there is no password or registration required. However, if we start to see issues with that, countermeasures will be taken. Please use videocall courtesy and be respectful at all times.
-
 ## Signup for Monthly CTFs
 Here is the link to the sign up for monthly CTFs - https://docs.google.com/spreadsheets/d/1IJFxKex4hBtoq8zYiCy1NN9ITDEmBLNb1SiwHKErP-Q/edit?usp=sharing
