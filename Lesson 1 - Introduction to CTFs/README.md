@@ -13,14 +13,20 @@ We've also created a link to a survey where you can let us know what you want to
 ## Linux
 When it comes to cybersecurity and CTF competitions, having access to a Linux environment is at the very least super helpful, if not essential. There are several tools that have not been written for use in a Windows environment. So, what are your options??
 
-* WSL
-* Virtual machine
-* Dual-boot
+* [Installing WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
+* [Virtual machine](https://itsfoss.com/install-linux-in-virtualbox/)
+* [Dual-boot](https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/)
 
 ## LSB
-This is a common steganography tool used to hide data (text, black+white photos, color photos) in bits of an image. Look at the LSB Steganography.pptx file to learn about *HOW* LSB steg works. Then, look at some of the examples:
+This is a common steganography tool used to hide data (text, black+white photos, or color photos) in bits of an image. Look at the LSB Steganography.pptx file to learn about *HOW* LSB steg works. Then, look at some of the examples:
 
-[Ian fills in examples here]
+* [Before hiding data](https://raw.githubusercontent.com/JustinApplegate/ctf-training/main/Lesson%201%20-%20Introduction%20to%20CTFs/boston-skyline.png)
+* [After hiding data](https://raw.githubusercontent.com/JustinApplegate/ctf-training/main/Lesson%201%20-%20Introduction%20to%20CTFs/txt-em-boston.png)
+
+**Tools:**
+* Website for text/black&white photo LSB - https://stegonline.georgeom.net/upload
+* Website for color photo LSB - https://incoherency.co.uk/image-steganography/
+* Python script for text LSB - https://github.com/djrobin17/image-stego-tool
 
 # External Resources
 Are you so in love with cybersecurity and CTFs that you want to increase your skills outside of class? Here's a list of resources that you can access to learn on your own! If there are others that you're aware of, let us know in the Slack workspace, and we'll add it here! 
