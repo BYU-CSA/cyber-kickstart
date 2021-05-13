@@ -7,7 +7,7 @@ Not sure what a CTF is or how it works? Don't worry, we've written up [a documen
 ## Topics?
 What do you want to learn? We've already included a list of [future topics](https://github.com/JustinApplegate/ctf-training/blob/main/Future_Topics.md) that we want to cover, but if there's something in particular you've been *dying* to learn, or something we don't have, let us know in Slack! 
 
-We've also created a link to a survey where you can let us know what you want to learn: `<insert link here>`
+We've also created a link to a survey where you can let us know what you want to learn: https://forms.gle/Gm2eaaCNFMrwqP239
 
 # Technical Topics
 ## Linux
