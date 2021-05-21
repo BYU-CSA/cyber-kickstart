@@ -36,7 +36,6 @@ If you want to get ahead, these are some topics that we plan on covering in the 
     * steghide
     * strings + grep
     * exiftool -v3
-    * LSB
     * GIMP (layers, hex of colors)
 * Binary exploitation
 * Reverse engineering
@@ -44,9 +43,8 @@ If you want to get ahead, these are some topics that we plan on covering in the 
     * Assembly
 * OSINT
     * Social media
-    * DNS lookup
     * Regex
-    * Googling (search + maps)
+    * Googling (maps)
 * Other
     * Git history
     * QR codes
