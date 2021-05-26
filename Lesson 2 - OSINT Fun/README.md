@@ -49,5 +49,5 @@ This is what BYU's IT&C Department's website looked like in 1999:
 
 ![image](https://user-images.githubusercontent.com/70449145/119072018-05ed1580-b9a8-11eb-9aa6-4d68dd85bfad.png)
 
-## External Resources
+## Challenges
 Want an OSINT challenge to do in your free time? Take a look at [Sourcing Games](https://sourcing.games/) and see how far you can get! 
