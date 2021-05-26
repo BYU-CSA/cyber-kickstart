@@ -6,7 +6,6 @@ If you want to get ahead, these are some topics that we plan on covering in the 
     * Directory/file enumeration
     * Crawl websites
     * Access/interpret webpages with Python
-    * SQL injection (sqlmap)
     * XSS
     * Burp suite
     * curl (headers)
