@@ -31,6 +31,9 @@ This is a common steganography tool used to hide data (text, black+white photos,
 **Notes:**
 * LSB steganography is only used on PNG photos (not JPEGs) because JPEGS are a lossy photo format, meaning that when you compress then uncompress it, you lose data (ie your encoding is gone). Therefore, from a CTF standpoint, LSB steganography is only something to look for in PNG photos, not JPEGs. 
 
+## Challenges
+Want to see how well you understand the material? We've provided 3 photos with hidden messages for you to find! See if you can find them all...
+
 # External Resources
 Are you so in love with cybersecurity and CTFs that you want to increase your skills outside of class? Here's a list of resources that you can access to learn on your own! If there are others that you're aware of, let us know in the Slack workspace, and we'll add it here! 
 
