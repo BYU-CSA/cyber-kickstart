@@ -40,7 +40,7 @@ If you want to get ahead, these are some topics that we plan on covering in the 
 * Reverse engineering
     * Ghidra
     * Assembly
-* OSINT
+* OSINT - Covered in lesson 2
     * Social media
     * Regex
     * Googling (maps)
