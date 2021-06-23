@@ -49,4 +49,9 @@ As the years go by, these issues change, although some, such as Security Misconf
 
 Other places to learn about web vulnerabilities would include The Sans Institute blog at https://wwww.sans.org/blog. Sans is considered one of the flagship technology institutions and is a phenomenal place to look to for information on Cyber topics and other domains.
 
-Lastly, although they may be more dificult to understand and digest at first, I would definitely recommend scrolling through submitted bug bountry reports and see what professionals are finding on websites and applications today. Hacker101 is the premier site for bugbounty, both for companies to recruit and hackers to work on. Some reports and vulnerabilities are not publically disclosed, however 
+Lastly, although they may be more dificult to understand and digest at first, I would definitely recommend scrolling through submitted bug bountry reports and see what professionals are finding on websites and applications today. Hacker101 is the premier site for bugbounty, both for companies to recruit and hackers to work on. Some reports and vulnerabilities are not publically disclosed, however plenty are. There are also good resources in their on site documentation, found here https://www.hacker101.com/resources.
+
+## Conclusion
+
+So in review, WeCTF is a great time to sharpen skills in Web technologies and Exploits. Taking the time to learn about these vulnerabilities helps us to be better cybersecurity 
+students and more mindful of the current environment.
