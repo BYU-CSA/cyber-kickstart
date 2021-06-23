@@ -1,4 +1,4 @@
-# Lesson
+# Lesson 6 - Intro to Reverse Engineering
 
 ## Reverse.cpp
 Here is the output for running gdb on the most basic function - just returning 0. 
@@ -95,10 +95,3 @@ Breakpoint 1 at 0x1129: file reverse2.cpp, line 3.
 Notice how the function prologue is the same, except that no local space is allocated for function parameters (since there are none). However, rbp is still pushed and popped from the stack, and 0 is still returned through the eax register. 
 
 When we place a breakpoint at main, the program puts it at address 0x1129 because the function prologue ends there, and variables that we specify are being initialized now. 
-
-### Data Types
-At this point, it's necessary for us to discuss data types. 
-
-https://www.geeksforgeeks.org/c-data-types/
-
-## Reverse3.cpp

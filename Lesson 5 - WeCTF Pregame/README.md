@@ -1,5 +1,5 @@
 
-# Lesson 4.5: WeCTF Preparation
+# Lesson 5: WeCTF Preparation
 
 ## Web Only CTF Introduction
 In their words, their vision is to "Help expose some of the latest vulnerabilities in the web technologies, in topics such as side channeling and race condition, SQL injection, and SSRF." It utilizes langauges such as Python, Golang, PHP, C++, Javascript; and services such as Redis, SQLite, Flask, etc.
