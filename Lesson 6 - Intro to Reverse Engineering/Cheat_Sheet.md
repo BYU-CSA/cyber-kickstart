@@ -30,9 +30,6 @@ You'll notice how each register has two names - one that starts with an `e`, and
 ## Assembly
 The overall format is `operation <destination> <source>`. The destination and source are either registers, memory locations, or values. 
 
-## Data Types
-fdsa
-
 ## Other
 * `echo "set disassembly-flavor intel" > ~/.gdbinit` - sets the syntax as Intel permanently
 * Variable names declared while programming do not translate when compiling. In other words, it doesn't matter what you name a variable, the compiler won't record it. This means that when reverse engineering, you won't have variable names, only address locations. 

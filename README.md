@@ -18,7 +18,7 @@ New to CTFs? Not sure how to start? We've provided a document for beginners that
 There are so many things we want to cover, we just don't have enough time. We've created [a Future Topics page](https://github.com/JustinApplegate/ctf-training/blob/main/Future_Topics.md) that lists some of the tools and resources we want to teach in the future. If you want to get ahead or have suggestions that aren't on there, let us know in the Slack workspace!
 
 ## Other Resources
-If you're interested in using other resources outside of the ones we go through, we've provided a list in [Lesson 1's README page](https://github.com/JustinApplegate/ctf-training/blob/main/Lesson%201%20-%20Introduction%20to%20CTFs/README.md), so go and take a look! 
+If you're interested in using other resources outside of the ones we go through, we've provided a list in [Resource Dump page](https://github.com/JustinApplegate/ctf-training/blob/main/Resource%20Dump.md), so go and take a look! 
 
 # Resources
 ## Zoom Details

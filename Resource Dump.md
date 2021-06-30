@@ -27,7 +27,9 @@ Are you so in love with cybersecurity and CTFs that you want to increase your sk
 * [CTF Github Repo of Tools](https://github.com/apsdehal/awesome-ctf)
     * This is a GitHub repo put together by someone else that contains another extensive list of tools that can aid in CTF and cybersecurity challenges - like, extensive...
 * [Steganography Cheatsheet](https://pequalsnp-team.github.io/cheatsheet/steganography-101)
-    * On a steg challenge and you're stuck? This provides a few unique methods to attack steganography problems that may help you. 
+    * On a steg challenge and you're stuck? This provides a few unique methods to attack steganography problems that may help you.
+* [BurpSuite](https://portswigger.net/burp)
+    * Burpsuite is one of the best tools for solving Web-focused challenges in CTF's.
 ## CTF Information
 
 * [CTF 101](https://ctf101.org/)
