@@ -2,9 +2,6 @@
 If you want to get ahead, these are some topics that we plan on covering in the future. 
 
 * Web exploitation
-    * robots.txt
-    * Directory/file enumeration
-    * Crawl websites
     * Access/interpret webpages with Python
     * XSS
     * curl (headers)
