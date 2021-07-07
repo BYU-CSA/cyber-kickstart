@@ -7,10 +7,8 @@ If you want to get ahead, these are some topics that we plan on covering in the 
     * Crawl websites
     * Access/interpret webpages with Python
     * XSS
-    * Burp suite
     * curl (headers)
     * Google Dork
-    * Subdomain enumeration
     * Finding web applications used
     * httprint
 * Cryptography
@@ -40,12 +38,11 @@ If you want to get ahead, these are some topics that we plan on covering in the 
 * Reverse engineering
     * Ghidra
     * Assembly
-* OSINT - Covered in lesson 2
+* OSINT
     * Social media
     * Regex
-    * Googling (maps)
+    * Google Maps
 * Other
     * Git history
     * QR codes
-    * nmap
     * Everyone makes their own CTF problem
