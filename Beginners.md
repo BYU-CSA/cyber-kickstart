@@ -30,6 +30,6 @@ Sometimes, the amount of points you get from each completed challenge decreases 
     * [Intro to Hashing](https://www.theguardian.com/technology/2016/dec/15/passwords-hacking-hashing-salting-sha-2)
     * [Why you can't unhash a hash](https://stackoverflow.com/questions/6603849/why-is-it-not-possible-to-reverse-a-cryptographic-hash)
 * Git
-    * Git is used in almost every software development project, and it keeps track of previous changes. We will cover some interesting aspects of Git in the future, but understand what Git it and how it works is really important
+    * Git is used in almost every software development project, and it keeps track of previous changes. We will cover some interesting aspects of Git in the future, but understand what Git is and how it works is really important
     * [Version control tutorial](https://www.atlassian.com/git/tutorials/what-is-version-control)
     * [Git cheatsheet](https://i.redd.it/8341g68g1v7y.png)
