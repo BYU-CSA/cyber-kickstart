@@ -16,3 +16,9 @@
 - https://ctftime.org/event/995/tasks/
 
 
+#### Attack & Defense CTF's in general:
+- https://www.reddit.com/r/securityCTF/comments/53eg3w/attackdefense_ctf/
+- https://achyuthabharadwaj.github.io/attack-defense-CTF/
+- https://github.com/topics/attack-defense
+- https://medium.com/compass-security/attack-defense-ctf-80310c3610c5
+
