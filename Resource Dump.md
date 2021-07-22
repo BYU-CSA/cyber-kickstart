@@ -30,6 +30,8 @@ Are you so in love with cybersecurity and CTFs that you want to increase your sk
     * Burpsuite is one of the best tools for solving Web-focused challenges in CTF's.
 * [Default Credentials](https://github.com/ihebski/DefaultCreds-cheat-sheet)
     * This contains a very comprehensive list of default credentials for almost everything out there.
+* [XSS Filter Evasion Cheatsheet](https://owasp.org/www-community/xss-filter-evasion-cheatsheet)
+    * This contains a list of various methods to bypass XSS filters.
 
 ## CTF Information
 * [CTF 101](https://ctf101.org/)
