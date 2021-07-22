@@ -1,12 +1,12 @@
 # Beginners
-A good introduction or explanation to CTFs is [here](https://securityintelligence.com/behind-the-scenes-at-a-capture-the-flag-ctf-competition/), an article by SecurityIntelligence. Capture the Flag competitions challenge you to complete problems by learning and applying skills that are useful in real-life cybersecurity careers. They can be done alone, but many allow you to have teams of participants, usually up to 4 people. 
+Capture the Flag competitions challenge you to complete problems by learning and applying skills that are useful in real-life cybersecurity careers. They can be done alone, but many allow you to have teams of participants, usually up to 4 people. 
 
 The most common style is jeopardy, where there is a range of topics covered and each topic has some problems worth points. Some common categories include web exploitation, binary exploitation, reverse engineering, cryptography, and forensics. Each competition is run a little differently, and they range in difficulty. Some are held annually, some semi-anually, and others only once. 
 
 Sometimes, the amount of points you get from each completed challenge decreases as more people complete them (ie, the easier challenges are worth less points). 
 
 [Here](https://ctf101.org/) is a great resource that goes over some of the topics covered in CTFs. 
-
+Another good introduction or explanation to CTFs is [here](https://securityintelligence.com/behind-the-scenes-at-a-capture-the-flag-ctf-competition/), an article by SecurityIntelligence. 
 ## Skills We Won't Cover
 * Programming
     * Knowing programming languages isn't the focus of cybersecurity or CTFs, but they are essential in completing some challenges. The most important ones to know are Python, HTML/CSS/JavaScript, SQL, PHP, and Assembly, in that order. 
