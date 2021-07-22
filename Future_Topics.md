@@ -3,7 +3,6 @@ If you want to get ahead, these are some topics that we plan on covering in the 
 
 * Web exploitation
     * Access/interpret webpages with Python
-    * XSS
     * curl (headers)
     * Google Dork
     * Finding web applications used
@@ -17,6 +16,7 @@ If you want to get ahead, these are some topics that we plan on covering in the 
     * Playfair
     * Link to cipher tools
     * Keypad -> letters
+    * RSA
 * Password cracking
     * John the Ripper
     * Wordlists

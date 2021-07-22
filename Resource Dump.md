@@ -2,7 +2,6 @@
 Are you so in love with cybersecurity and CTFs that you want to increase your skills outside of class? Here's a list of resources that you can access to learn on your own! If there are others that you're aware of, let us know in the Slack workspace, and we'll add it here! 
 
 ## CTF Platforms
-
 * [CTFtime](https://ctftime.org/event/list/upcoming)
     * This resource is first because it's the most important - this webpage has an extensive list of virtual CTFs happening all around the world. This is where we determine which CTF to participate in each month. If you would like to try one on your own or at your own time, you can find one here! Each CTF is different, and some are more difficult than others. 
 * [TryHackMe](https://tryhackme.com/)
@@ -23,15 +22,16 @@ Are you so in love with cybersecurity and CTFs that you want to increase your sk
     * A branch of OverTheWire, RedTiger has 10 levels focused specifically on SQL injection in a PHP environment
  
 ## CTF Tools
-
 * [CTF Github Repo of Tools](https://github.com/apsdehal/awesome-ctf)
     * This is a GitHub repo put together by someone else that contains another extensive list of tools that can aid in CTF and cybersecurity challenges - like, extensive...
 * [Steganography Cheatsheet](https://pequalsnp-team.github.io/cheatsheet/steganography-101)
     * On a steg challenge and you're stuck? This provides a few unique methods to attack steganography problems that may help you.
 * [BurpSuite](https://portswigger.net/burp)
     * Burpsuite is one of the best tools for solving Web-focused challenges in CTF's.
-## CTF Information
+* [Default Credentials](https://github.com/ihebski/DefaultCreds-cheat-sheet)
+    * This contains a very comprehensive list of default credentials for almost everything out there.
 
+## CTF Information
 * [CTF 101](https://ctf101.org/)
     * This provides an overview of a lot of CTF concepts, methods, and challenges that you'll come across or need doing these competitions.
 * [INE Pentesting Student Course](https://my.ine.com/path/a223968e-3a74-45ed-884d-2d16760b8bbd)
