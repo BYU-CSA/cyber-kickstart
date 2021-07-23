@@ -8,11 +8,8 @@ If you want to get ahead, these are some topics that we plan on covering in the 
     * Finding web applications used
     * httprint
 * Cryptography
-    * Common ciphers (base64, hex, binary, caesar/rot, morse code, alphabetical)
-    * Baconian
     * Vigenere
     * Substitution
-    * Pigpen
     * Playfair
     * Link to cipher tools
     * Keypad -> letters
