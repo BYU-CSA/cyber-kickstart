@@ -1,4 +1,4 @@
-# CSA Weekly CTF Training
+# BYU Weekly CTF Training
 This GitHub repository is used to store lessons for CTF training group meetings held regularly at Brigham Young University-Provo. Each folder contains files, scripts, links, and more for a lesson. We've provided this resource so that new members can see old lessons, follow along with current lessons, and review lessons after the actual training hour. 
 
 Meetings are held each Wednesday from 7:00 PM - 8:00 PM MST, in room 385 in the Crabtree. If you're a student here, we'd love to have you join us!
