@@ -14,3 +14,11 @@ When it comes to cybersecurity and CTF competitions, having access to a Linux en
 * [Virtual machine](https://itsfoss.com/install-linux-in-virtualbox/)
 * [Dual-boot](https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/)
 * Bare metal (Linux being the only OS)
+
+## Writeups
+To really understand how CTF problems are solved and how to approach them, it's best to go over writeups. After many CTFs, participants will make "writeups", where they go through the problem solving process step by step. They'll include screenshots and links to external resources so others who couldn't solve the problem could learn from them. We created a few writeups for challenges that we've solved, and linked them below:
+
+* [baby_python_fixed](https://ctftime.org/writeup/29653) - jail
+* [Tablet 2](https://ctftime.org/writeup/29647) - web
+* [Tedious](https://ctftime.org/writeup/29621) - reverse engineering
+* [Charlie Chaplin 1](https://ctftime.org/writeup/29646) - OSINT
