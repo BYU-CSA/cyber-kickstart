@@ -81,3 +81,7 @@ In the case that you want to steal something else, such as credentials that some
 
 ### Deploying the Payload
 You've found a reflection point, been able to insert Javascript, and you've crafted your own payload to steal cookies, credentials, etc. Now you need to find a way to get the victim to run the code. Whether it's stored or reflected XSS, you'll need your victim to access a specific webpage. In real life, this would normally be through a phishing attempt or by exploiting an XSS vulnerability on another site to redirect them. In CTFs, they typically have an admin bot that will visit whatever link you submit to it, thereby making your payload deployment very easy. 
+
+
+### Practice 
+[XSS Game](http://xss-game.appspot.com/)
