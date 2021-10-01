@@ -54,3 +54,9 @@ Are you so in love with cybersecurity and CTFs that you want to increase your sk
     * This resource, provided by SANS, provides a visual of what a CISO needs to keep in mind, and also the major functions of a Security Operations Center (SOC). 
 * [Docker Curriculm](https://docker-curriculum.com/#docker-compose)
     * This is a great introduction into Docker. 
+
+
+## Other Tools
+
+* [Github Student Developer Pack](https://education.github.com/pack)
+   * This is a great resource that is accessible through your .edu account. 
