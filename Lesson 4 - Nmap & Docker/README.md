@@ -36,5 +36,32 @@ There's about a dozen images in the Nmap Photos folder that contain tons of diff
 
 <img src="scan_example_2.png">
 
-## Challenges
-We have set up two EC2 instances from Amazon AWS available for you to scan with nmap. The two IPs are 18 117 171 144 and 3 15 39 9. Can you figure out which one has a web server?
+### Challenges
+There's a site called [ScanMe.nmap.org](http://scanme.nmap.org/) that's designed to be scanned with Nmap. Take a crack at it and see what you find!
+
+## Docker
+Docker is a very popular containerization software that allows you to deploy pre-configured OSes in a lightweight environment. They are commonly used in CTFs, development, and the real world. Understanding how to load, deploy, and poke at a Docker container will be important to your future success. 
+
+### Containers vs. Virtual Machines
+While containers and virtual machines perform similar functions, they are fundamentally different by nature. The biggest difference that that virtual machines simulate virtual hardware (network card, hard drive, memory, etc.), while containers piggyback off of the hardware that the host OS is running on. They both have separate filesystems, but this is only at a software level. 
+
+More specifics about containers and how they are different from VMs can be found [here](https://www.cybersecurity-insiders.com/containers-101-what-do-you-need-to-know/) and [here](https://www.weave.works/blog/a-practical-guide-to-choosing-between-docker-containers-and-vms). 
+
+![Docker vs containers](containers-vs-virtual-machines.jpg)
+
+### Common Commands
+- `docker load <simple_ctf_docker_image.tar`
+    - Loads a downloaded docker image
+- `docker image ls`
+    - Lists all loaded docker images on your machine
+- `docker-compose up -d`
+    - Starts a docker image based on a `docker-compose.yml` file
+- `docker-compose down`
+    - Stops a running docker image
+- `docker run -it name_of_image /bin/bash`
+    - Runs a bash shell *inside* a loaded but not running Docker container
+- `docker ps -a`
+    - Shows running/recently running images
+
+### Challenge
+We've created a custom Docker image for you, based on Alpine Linux, called `simple_ctf_docker_image.tar`. Use the commands above to load it, run `/bin/ash`, and find the `flag.txt` in the `/root/` directory!
