@@ -1,4 +1,14 @@
 # Lesson 5 - Intro to Reverse Engineering
+## What is Reverse Engineering?
+Computers only know how to deal with 1s and 0s, and that's really hard for us. When we write programs, we could do it in 1s and 0s, but that's painful and inefficieint. Instead, we write it in programming languages that look more familiar to us, and we have programs called "compilers" that turn that into the 1s and 0s you see for the computer to run. Once you've written a program in C or C++, you've got to compile them and run it. The compiled version of the code is called a binary. However, what if you have the binary and want to convert it back into code?? This is what reverse engineering is. 
+
+## Memory Model
+All programs are executed in memory, but how are they stored? The better you understand that, the better you'll be able to reverse engineer binaries. Below is the memory model:
+
+![Memory model](memory_layout.png)
+
+We're just going to focus on the stack. Now, it may seem counterintuitive, but the stack actually goes from the top to the bottom. There are two registers used to keep track of this - the base pointer and the stack pointer. Each time a function is called by another function, another segment is added to the stack. The top of that segment is the base pointer, and the bottom is the stack pointer. In between is where all the variables are initialized, or in other words space is allocated for them at the beginning of the function based on their type.
+
 ## Reverse.cpp
 Here is the output for running gdb on the most basic function - just returning 0. 
 ```
@@ -23,7 +33,7 @@ Breakpoint 1 at 0x1130: file reverse.cpp, line 2.
 ```
 
 ### Function Prologue
-The only line of code in main is `return 0;` , so you would think that would be the first line in assembly. However, you'll notice that lines 0x1125 to 0x1130 have a bunch of random stuff. The compiler adds in a few lines of code to set up the memory for the rest of the functions. These lines are known as the **function prologue**. If you put a breakpoint at the beginning of main, gdb puts it at 0x1130 because it knows that line 2 of code actually starts at memory address 0x1130 (it skips the function prologue). 
+The only line of code in main is `return 0;` , so you would think that would be the first line in assembly. However, you'll notice that lines 0x1125 to 0x112c have a bunch of random stuff. The compiler adds in a few lines of code to set up the memory for the rest of the functions. These lines are known as the **function prologue**. If you put a breakpoint at the beginning of main, gdb puts it at 0x1130 because it knows that line 2 of code actually starts at memory address 0x1130 (it skips the function prologue). 
 
 #### Function Arguments
 At addresses 0x1129 and 0x112c, there are two `mov` commands that involve the edi and rsi registers. In our main function, there are two incoming parameters - an integer (that keeps count of the number of arguments), and a character array (with the arguments). The edi/rdi register is the first parameter passed to a function, and the esi/rsi function has the second parameter. 
@@ -50,47 +60,20 @@ Line 2 of code (`return 0;`) correlates with address 0x1130 in the disassemble. 
 
 Why are we putting 0 into the eax register (32-bit), and not the rax register (64-bit)? We defined the return type for main to be an integer on line 1. Therefore, it doesn't need the rax register, only the shorter eax version. 
 
-## Reverse2.cpp
-Here, we've modified our original program a bit. We removed our two main function arguments (argc and argv), but we've initialized a wide variety of variables.
+## RE2_64bit
+This is a binary without the original `.cpp` or `.c` file. Normally, the first step would be to use Ghidra to automatically reverse some components and give you back some janky C code, but we're going to skip that part (another lesson). We will simply cover how to use GDB to do some dynamic analysis on this.
 
-```
-$ gdb -q ./reverse2
-Reading symbols from ./reverse2...
-(gdb) list
-1       int main() {
-2           // implicit types
-3           int a = 0;
-4           char b = 'a';
-5           bool c = true;
-6           float e = 1.2;
-7           double f = 4;
-8
-9           // modified types
-10          long int aa = 1;
-(gdb) disassemble main
-Dump of assembler code for function main():
-   0x0000000000001125 <+0>:     push   rbp
-   0x0000000000001126 <+1>:     mov    rbp,rsp
-   0x0000000000001129 <+4>:     mov    DWORD PTR [rbp-0x4],0x0
-   0x0000000000001130 <+11>:    mov    BYTE PTR [rbp-0x5],0x61
-   0x0000000000001134 <+15>:    mov    BYTE PTR [rbp-0x6],0x1
-   0x0000000000001138 <+19>:    movss  xmm0,DWORD PTR [rip+0xec8]        # 0x2008
-   0x0000000000001140 <+27>:    movss  DWORD PTR [rbp-0xc],xmm0
-   0x0000000000001145 <+32>:    movsd  xmm0,QWORD PTR [rip+0xec3]        # 0x2010
-   0x000000000000114d <+40>:    movsd  QWORD PTR [rbp-0x18],xmm0
-   0x0000000000001152 <+45>:    mov    QWORD PTR [rbp-0x20],0x1
-   0x000000000000115a <+53>:    mov    WORD PTR [rbp-0x22],0x2
-   0x0000000000001160 <+59>:    mov    DWORD PTR [rbp-0x28],0x3
-   0x0000000000001167 <+66>:    mov    DWORD PTR [rbp-0x2c],0xffffffff
-   0x000000000000116e <+73>:    mov    eax,0x0
-   0x0000000000001173 <+78>:    pop    rbp
-   0x0000000000001174 <+79>:    ret    
-End of assembler dump.
-(gdb) break main
-Breakpoint 1 at 0x1129: file reverse2.cpp, line 3.
-```
+If you run it with GDB, followed by the `layout asm`, `layout reg`, `break main`, and `run`, you will see something like this:
 
-### Function Prologue and Return
-Notice how the function prologue is the same, except that no local space is allocated for function parameters (since there are none). However, rbp is still pushed and popped from the stack, and 0 is still returned through the eax register. 
+![GDB layout](gdb.png)
 
-When we place a breakpoint at main, the program puts it at address 0x1129 because the function prologue ends there, and variables that we specify are being initialized now. 
+If you want to progress through each line of assembly code, use the `ni` instruction. It will execute the highlighted line, and stop before the next one. If it's calling a function (like `printf`, `exit`, `strlen`, or a custom function) and you use `ni`, then it will run the entire function and go to the next line. If you would like to go *inside* that function to see what it does while running, use the `si` command, then more `ni` commands. Once it's finished, it will return back to your original function and you can continue with `ni`, or `continue` to finish until the next breakpoint/end of the program. 
+
+In more complicated files, you'll want to call a function with your own parameters to see what it does. You can use the `call` command to do so. While using Ghidra, I found a function called `getflagbytid(int tid)` that is never called anywhere. It's just a function laying around, never used. However, based on the name, we know that this is what we want to use. In the CTF problem, they gave me a unique tid, just a 4-digit number. All I need to do is run `call (int) getflagbytid(1234)`, and GDB will run that function with that parameter, and spit out a flag for me! Try it out yourself!!
+
+*Note - sometimes, you'll have to cast the output of the function for it to work. For example, if you simply run `call getflagbytid(1234)`, it will complain to you about an unknown return type. Casting this to an integer will resolve the problem, and allow it to run. Tbh I don't really understand why that is.*
+
+## Additional Resources
+* Unrestricted input in binaries can allow you to overwrite values on the stack and insert malicious code - this is called **binary exploitation**, or **pwn**. Micheal has an excellent presentation on the most simple pwn example (which is still difficult) in this repo called "presentation.pdf". 
+* If you're really into low-level stuff like this and want to do more reverse engineering/pwn, Ian stumbled upon a great resource called [Nightmare](https://guyinatuxedo.github.io/) (aptly named!). This contains a series of guides and challenges that explains the processes and techniques of reverse engineering. 
+* If you'd like to start using Ghidra to allow you to do dynamic and static analysis at the same time, [this tutorial](https://www.shogunlab.com/blog/2019/04/12/here-be-dragons-ghidra-0.html) is a great resource!! Ghidra is super important.
