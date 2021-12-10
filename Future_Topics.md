@@ -13,13 +13,10 @@ If you want to get ahead, these are some topics that we plan on covering in the 
     * Playfair
     * Link to cipher tools
     * Keypad -> letters
-    * RSA
 * Password cracking
-    * John the Ripper
     * Wordlists
 * Forensics
     * Hex editor
-    * Magic bytes
     * volatility
     * Autopsy
 * Steganography
@@ -30,7 +27,6 @@ If you want to get ahead, these are some topics that we plan on covering in the 
     * GIMP (layers, hex of colors)
 * Binary exploitation
 * Reverse engineering
-    * Ghidra
     * Assembly
 * OSINT
     * Social media
