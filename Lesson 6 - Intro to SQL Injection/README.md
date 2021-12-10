@@ -47,7 +47,7 @@ LIMIT 1
 Everything after `'user'` doesn't matter since there's a comment, so the SQL query *will* return a result, and you'll be authenticated. You didn't even need to know the password! This is one example of **subverting application logic**.
 
 ## How to Identify SQL Injectable pages
-There are many different ways, but one way is by simply putting an apostrophe `'` in a field - if you are returned an error, that's a strong indication that it's SQL injectable. 
+There are several different ways, but placing a single quote `'`, double quote `"`, or backtick ` in a field is a good test. If you are returned an error, that's a strong indication that it's SQL injectable. 
 
 ## Retrieving Hidden Data
 A great example of retrieving hidden data is explained on [portswigger.net](https://portswigger.net/web-security/sql-injection). Let's imagine that you're on a website and when you click on a button that says "Gifts", it brings you here to show you all the products that are gifts (you can try this yourself at hidden_data.html):

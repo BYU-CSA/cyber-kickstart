@@ -1,3 +1,15 @@
+* Web exploitation
+* Python and payloads (interact with terminals and system commands)
+* Go through simple challenges
+* ASCII art and sqrl injection
+* Enumeration and exploitation (cheat sheet, various languages)
+* Memory and network forensics
+* Sherlock
+* Ghidra
+* RSA
+* Magic bytes
+* Hashcat
+
 # List of Future Topics/Skills
 If you want to get ahead, these are some topics that we plan on covering in the future. 
 
@@ -6,7 +18,7 @@ If you want to get ahead, these are some topics that we plan on covering in the 
     * curl (headers)
     * Google Dork
     * Finding web applications used
-    * httprint
+    * httprint *
 * Cryptography
     * Vigenere
     * Substitution
@@ -15,6 +27,7 @@ If you want to get ahead, these are some topics that we plan on covering in the 
     * Keypad -> letters
 * Password cracking
     * Wordlists
+    * Hashcat
 * Forensics
     * Hex editor
     * volatility
