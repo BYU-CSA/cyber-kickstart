@@ -2,11 +2,11 @@
 If you want to get ahead, these are some topics that we plan on covering in the future. 
 
 * Web exploitation
-    * Access/interpret webpages with Python
-    * curl (headers)
+    * HTTP protocol in depth
+    * curl
     * Google Dork
     * Finding web applications used
-    * httprint *
+    * httprint
 * Cryptography
     * Vigenere
     * Substitution
@@ -15,9 +15,7 @@ If you want to get ahead, these are some topics that we plan on covering in the 
     * Keypad -> letters
 * Password cracking
     * Wordlists
-    * Hashcat
 * Forensics
-    * Hex editor
     * volatility
     * Autopsy
 * Steganography
