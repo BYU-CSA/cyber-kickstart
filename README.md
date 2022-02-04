@@ -19,6 +19,3 @@ There are so many things we want to cover, we just don't have enough time. We've
 
 ## Other Resources
 If you're interested in using other resources outside of the ones we go through, we've provided a list in [Resource Dump page](https://github.com/JustinApplegate/ctf-training/blob/main/Resource%20Dump.md), so go and take a look! 
-
-## Signup for Monthly CTFs
-Here is the link to the sign up for monthly CTFs - https://docs.google.com/spreadsheets/d/1z0sPphB6hqV1QQ-dFcAuexsya6KkAYJ38jwEB7fcrBo/edit#gid=886571485
