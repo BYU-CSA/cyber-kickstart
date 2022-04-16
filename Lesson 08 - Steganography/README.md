@@ -8,6 +8,8 @@ This is a common steganography tool used to hide data (text, black+white photos,
 * Website for text/black&white photo LSB - https://stegonline.georgeom.net/upload
 * Website for color photo LSB - https://incoherency.co.uk/image-steganography/
 * Python script for text LSB - https://github.com/djrobin17/image-stego-tool
+* Stegseek - https://github.com/RickdeJager/stegseek
+  * Detects whether or not steghide is used and is wicked fast at brute forcing the steghide password
 
 **Notes:**
 * LSB steganography is only used on PNG photos (not JPEGs) because JPEGS are a lossy photo format, meaning that when you compress then uncompress it, you lose data (ie your encoding is gone). Therefore, from a CTF standpoint, LSB steganography is only something to look for in PNG photos, not JPEGs. 
