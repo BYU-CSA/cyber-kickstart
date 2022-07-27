@@ -50,7 +50,7 @@ What to learn if you are at that level
 ## Beginner
 ### Knowledge
 * How to approach pwn problems
-* Understand what various security measures can be taken to secure binaries
+* Understand what various security measures can be taken to secure binaries (introduction)
     * ASLR/PIE
         <details>
             <summary><i>Resources</i></summary>
@@ -77,7 +77,9 @@ What to learn if you are at that level
     <details>
         <summary><i>Resources</i></summary>
 
-    * [ir0nstone - ROP and gadgets](https://ir0nstone.gitbook.io/notes/types/stack/return-oriented-programming)
+    * [ir0nstone - ROP](https://ir0nstone.gitbook.io/notes/types/stack/return-oriented-programming)
+    * [ir0nstone - Gadgets](https://ir0nstone.gitbook.io/notes/types/stack/return-oriented-programming/gadgets)
+    * [ir0nstone - Calling Conventions](https://ir0nstone.gitbook.io/notes/types/stack/return-oriented-programming/calling-conventions)
     </details>
 * Can calculate offsets between functions and addresses in executables and the stack
 * What an overflow is
@@ -133,26 +135,27 @@ What to learn if you are at that level
             <summary><i>Resources</i></summary>
 
         * [ir0nstone - Format string attacks](https://ir0nstone.gitbook.io/notes/types/stack/format-string)
-        * [Nightmare/HoppersRoppers - Format strings](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc#format-strings)
         </details>
     * Ret2libc w/ one_gadget
         <details>
             <summary><i>Resources</i></summary>
 
-        * 
+        * [ir0nstone - ret2libc](https://ir0nstone.gitbook.io/notes/types/stack/return-oriented-programming/ret2libc)
         </details>
 * Use LD_PRELOAD
 * Leverage basic info leaks
     <details>
         <summary><i>Resources</i></summary>
 
+    * [ir0nstone - PIE info leak](https://ir0nstone.gitbook.io/notes/types/stack/pie/pie-exploit)
+    * [ir0nstone - ASLR info leak](https://ir0nstone.gitbook.io/notes/types/stack/aslr/aslr-bypass-with-given-leak)
     * [HTB Cyber Apocalypse 2022 - Retribution problem](https://matth.dmz42.org/posts/2022/hackthebox-ctf-cyber-apocalypse-2022-intergalactic-chase-pwn/#1-space-pirate-retribution)
     </details>
 * GOT overwrite
     <details>
         <summary><i>Resources</i></summary>
 
-    * [ir0nstone - GOT Overwrite](https://ir0nstone.gitbook.io/notes/types/stack/got-overwrite)
+    * [ir0nstone - GOT Overwrite](https://ir0nstone.gitbook.io/notes/types/stack/got-overwrite) and [Exploitation](https://ir0nstone.gitbook.io/notes/types/stack/got-overwrite/exploiting-a-got-overwrite)
     </details>
 * Basic ROP chain
 * Bad seed attacks
@@ -170,6 +173,7 @@ What to learn if you are at that level
         <summary><i>Resources</i></summary>
     
     * [ir0nstone - Syscalls](https://ir0nstone.gitbook.io/notes/types/stack/syscalls)
+    * [Linux x86_64 Syscall Table](https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/)
     </details>
 * Different architectures (ARM, MIPS, etc.)
 * Heap stuff
@@ -249,6 +253,12 @@ What to learn if you are at that level
     
     * [ir0nstone - Forking processes](https://ir0nstone.gitbook.io/notes/types/stack/forking-processes)
     </details>
+* Advanced format strings vulnerabilities with `%n`
+    <details>
+        <summary><i>Resources</i></summary>
+    
+    * [Nightmare/HoppersRoppers - Format strings](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc#format-strings)
+    </details>
 
 
 ## Advanced
@@ -260,3 +270,4 @@ What to learn if you are at that level
 * Windows (https://github.com/r3p3r/nixawk-awesome-windows-exploitation)
 * ret2dlresolve (https://ir0nstone.gitbook.io/notes/types/stack/ret2dlresolve)
 * ret2csu (https://ir0nstone.gitbook.io/notes/types/stack/ret2csu)
+* ret2plt (https://ir0nstone.gitbook.io/notes/types/stack/aslr/ret2plt-aslr-bypass)
