@@ -6,6 +6,11 @@ What to learn if you are at that level
     * Functions, conditionals, data types/structures
     * Libraries (externally-linked, ldd, etc.)
     * Compiling and basic binary understanding
+        <details>
+            <summary><i>Resources</i></summary>
+
+        * [Nightmare/HopperRoppers - Foundational C](https://github.com/hoppersroppers/nightmare/blob/master/modules/00-intro/readme.md)
+        </details>
     * Files/file descriptors
         <details>
             <summary><i>Resources</i></summary>
@@ -16,6 +21,14 @@ What to learn if you are at that level
     * Basic instructions for x86_64
     * Bits, bytes, words, binary, hexadecimal, etc.
     * Registers, stack, heap, memory
+        <details>
+            <summary><i>Resources</i></summary>
+
+        * [Nightmare/HopperRoppers - Intro to Assembly](https://github.com/hoppersroppers/nightmare/blob/master/modules/01-intro_assembly/readme.md)
+        * [Zeyuan Hu - Understanding how function call works](https://zhu45.org/posts/2017/Jul/30/understanding-how-function-call-works/)
+        * [YouTube - The Stack](https://www.youtube.com/watch?v=IWQ74f2ot7E&ab_channel=RetroGameMechanicsExplained)
+        * [YouTube - The Call Stack](https://www.youtube.com/watch?v=Q2sFmqvpBe0&t=318s&ab_channel=ComputerScience)
+        </details>
     * Objdump
 * Basic Python
     * Functions, conditionals
@@ -26,6 +39,12 @@ What to learn if you are at that level
     * Shells
     * Netcat/ports
 * Endianness
+* Basic reverse engineering
+    <details>
+        <summary><i>Resources</i></summary>
+
+    * [Nightmare/HopperRoppers - Intro to Rev](https://github.com/hoppersroppers/nightmare/tree/master/modules/03-beginner_re)
+    </details>
 
 
 ## Beginner
@@ -38,6 +57,7 @@ What to learn if you are at that level
 
         * [ir0nstone - PIE](https://ir0nstone.gitbook.io/notes/types/stack/pie)
         * [ir0nstone - ASLR](https://ir0nstone.gitbook.io/notes/types/stack/aslr)
+        * [Nightmare/HoppersRoppers - ASLR/PIE](https://github.com/hoppersroppers/nightmare/blob/master/modules/04-Overflows/5.1-mitigation_aslr_pie/readme.md)
         </details>
     * NX
     * Stack canaries
@@ -60,6 +80,12 @@ What to learn if you are at that level
     * [ir0nstone - ROP and gadgets](https://ir0nstone.gitbook.io/notes/types/stack/return-oriented-programming)
     </details>
 * Can calculate offsets between functions and addresses in executables and the stack
+* What an overflow is
+    <details>
+        <summary><i>Resources</i></summary>
+
+    * [Nightmare/HoppersRopper - Overflows](https://github.com/hoppersroppers/nightmare/tree/master/modules/04-Overflows#overflows)
+    </details>
 * Identify vulnerable code
     <details>
         <summary><i>Resources</i></summary>
@@ -70,7 +96,17 @@ What to learn if you are at that level
 
 ### Tools
 * GDB
+    <details>
+        <summary><i>Resources</i></summary>
+
+    * [Nightmare/HopperRoppers - GDB](https://github.com/hoppersroppers/nightmare/blob/master/modules/02-intro_tooling/gdb-unit_02.md)
+    </details>
 * Ghidra
+    <details>
+        <summary><i>Resources</i></summary>
+
+    * [Nightmare/HopperRoppers - Ghidra](https://github.com/hoppersroppers/nightmare/blob/master/modules/02-intro_tooling/ghidra/readme.md)
+    </details>
 * Pwntools - basic features
     <details>
         <summary><i>Resources</i></summary>
@@ -97,6 +133,7 @@ What to learn if you are at that level
             <summary><i>Resources</i></summary>
 
         * [ir0nstone - Format string attacks](https://ir0nstone.gitbook.io/notes/types/stack/format-string)
+        * [Nightmare/HoppersRoppers - Format strings](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc#format-strings)
         </details>
     * Ret2libc w/ one_gadget
         <details>
@@ -118,6 +155,12 @@ What to learn if you are at that level
     * [ir0nstone - GOT Overwrite](https://ir0nstone.gitbook.io/notes/types/stack/got-overwrite)
     </details>
 * Basic ROP chain
+* Bad seed attacks
+    <details>
+        <summary><i>Resources</i></summary>
+
+    * [Nightmare/HoppersRoppers - Bad Seed](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc#bad-seed)
+    </details>
 
 
 ## Intermediate
@@ -134,8 +177,17 @@ What to learn if you are at that level
     <details>
         <summary><i>Resources</i></summary>
     
+    * [Nightmare/HoppersRoppers - Shellcode](https://github.com/hoppersroppers/nightmare/blob/master/modules/04-Overflows/unit_03_shell.md)
     * [ir0nstone - Reliable shellcode](https://ir0nstone.gitbook.io/notes/types/stack/relro)
+    * [Nightmare/HoppersRopper - Shellcode variations](https://github.com/hoppersroppers/nightmare/blob/master/modules/04-Overflows/unit_04.md)
     </details>
+* Tracing
+    <details>
+        <summary><i>Resources</i></summary>
+    
+    * [Nightmare/HopperRoppers - ptrace](https://github.com/hoppersroppers/nightmare/blob/master/modules/02-intro_tooling/ptraceLesson.md)
+    </details>
+* 
 
 ### Tools
 * Pwntools - advanced features
@@ -164,12 +216,21 @@ What to learn if you are at that level
     </details>
 * Can use gadgets form custom ROP chains
 * Different architectures (ARM, MIPS, etc.)
-* Bypass canaries
-    <details>
-        <summary><i>Resources</i></summary>
+* Advanced bypasses of defensive techniques (outside of info leak)
+    * Bypass canaries
+        <details>
+            <summary><i>Resources</i></summary>
 
-    * [ir0nstone - Stack canary bypasses](https://ir0nstone.gitbook.io/notes/types/stack/canaries)
-    </details>
+        * [ir0nstone - Stack canary bypasses](https://ir0nstone.gitbook.io/notes/types/stack/canaries)
+        * [Nightmare/HoppersRoppers - Stack smashing and canary bypass](https://github.com/hoppersroppers/nightmare/blob/master/modules/04-Overflows/unit_05.md#stack-smashing-detected)
+        </details>
+    * Bypass ASLR
+        <details>
+            <summary><i>Resources</i></summary>
+
+        * [Nightmare/HoppersRoppers - Defeating ASLR](https://github.com/hoppersroppers/nightmare/blob/master/modules/04-Overflows/unit_05.md)
+        * [Nightmare/HoppersRoppers - Partial Overwrite](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc#partial-overwrite)
+        </details>
 * SROP
     <details>
         <summary><i>Resources</i></summary>
@@ -196,6 +257,6 @@ What to learn if you are at that level
 ## Unknown
 * Angr
 * Radare2
-* Windows
+* Windows (https://github.com/r3p3r/nixawk-awesome-windows-exploitation)
 * ret2dlresolve (https://ir0nstone.gitbook.io/notes/types/stack/ret2dlresolve)
 * ret2csu (https://ir0nstone.gitbook.io/notes/types/stack/ret2csu)
