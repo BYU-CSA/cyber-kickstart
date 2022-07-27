@@ -28,39 +28,39 @@ What to learn if you are at that level
 * Endianness
 
 
-## Beginner
-### Knowledge
-* How to approach pwn problems
-* Understand what various security measures can be taken to secure binaries
-    * ASLR/PIE
+## **Beginner**
+### **Knowledge**
+* **How to approach pwn problems**
+* **Understand what various security measures can be taken to secure binaries**
+    * **ASLR/PIE**
         <details>
             <summary>Resources</summary>
 
         * [ir0nstone - PIE](https://ir0nstone.gitbook.io/notes/types/stack/pie)
         * [ir0nstone - ASLR](https://ir0nstone.gitbook.io/notes/types/stack/aslr)
         </details>
-    * NX
-    * Stack canaries
-    * RELRO
+    * **NX**
+    * **Stack canaries**
+    * **RELRO**
         <details>
             <summary>Resources</summary>
 
         * [ir0nstone - RELRO](https://ir0nstone.gitbook.io/notes/types/stack/relro)
         </details>
-* Understand parts of a dynamically-linked binary
+* **Understand parts of a dynamically-linked binary**
     <details>
         <summary>Resources</summary>
 
     * [ir0nstone - PLT and GOT](https://ir0nstone.gitbook.io/notes/types/stack/aslr/plt_and_got)
     </details>
-* Understanding gadgets and return-oriented programming (ROP)
+* **Understanding gadgets and return-oriented programming (ROP)**
     <details>
         <summary>Resources</summary>
 
     * [ir0nstone - ROP and gadgets](https://ir0nstone.gitbook.io/notes/types/stack/return-oriented-programming)
     </details>
-* Can calculate offsets between functions and addresses in executables and the stack
-* Identify vulnerable code
+* **Can calculate offsets between functions and addresses in executables and the stack**
+* **Identify vulnerable code**
     <details>
         <summary>Resources</summary>
 
@@ -68,10 +68,10 @@ What to learn if you are at that level
     * [LITCTF 2022 - save_tyger problem](https://ctftime.org/writeup/34652)
     </details>
 
-### Tools
-* GDB
-* Ghidra
-* Pwntools - basic features
+### **Tools**
+* **GDB**
+* **Ghidra**
+* **Pwntools - basic features**
     <details>
         <summary>Resources</summary>
 
@@ -80,11 +80,11 @@ What to learn if you are at that level
     * [ir0nstone - Logging and Context](https://ir0nstone.gitbook.io/notes/other/pwntools/logging_and_context)
     * [ir0nstone - Packing](https://ir0nstone.gitbook.io/notes/other/pwntools/packing)
     </details>
-* One_gadget
+* **One_gadget**
 
-### Attacks
-* Can perform simple, textbook attacks
-    * Ret2win/redirection buffer overflow
+### **Attacks**
+* **Can perform simple, textbook attacks**
+    * **Ret2win/redirection buffer overflow**
         <details>
             <summary>Resources</summary>
 
@@ -92,32 +92,32 @@ What to learn if you are at that level
         * [LITCTF 2022 - save_tyger2 problem (ret2win)](https://github.com/CTF-Team-PlusPlusC/LITCTF2022-Writeups/tree/main/save_tyger2)
         * [HTB Cyber Apocalypse 2022 - Going Deeper problem (flow redirection)](https://heinandre.no/htb-cyber-apocalypse-2022/pwn/space-pirate-going-deeper/)
         </details>
-    * Non-`%n` format string attacks
+    * **Non-`%n` format string attacks**
         <details>
             <summary>Resources</summary>
 
         * [ir0nstone - Format string attacks](https://ir0nstone.gitbook.io/notes/types/stack/format-string)
         </details>
-    * Ret2libc w/ one_gadget
+    * **Ret2libc w/ one_gadget**
         <details>
             <summary>Resources</summary>
 
         * 
         </details>
-* Use LD_PRELOAD
-* Leverage basic info leaks
+* **Use LD_PRELOAD**
+* **Leverage basic info leaks**
     <details>
         <summary>Resources</summary>
 
     * [HTB Cyber Apocalypse 2022 - Retribution problem](https://matth.dmz42.org/posts/2022/hackthebox-ctf-cyber-apocalypse-2022-intergalactic-chase-pwn/#1-space-pirate-retribution)
     </details>
-* GOT overwrite
+* **GOT overwrite**
     <details>
         <summary>Resources</summary>
 
     * [ir0nstone - GOT Overwrite](https://ir0nstone.gitbook.io/notes/types/stack/got-overwrite)
     </details>
-* Basic ROP chain
+* **Basic ROP chain**
 
 
 ## Intermediate
