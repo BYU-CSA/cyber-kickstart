@@ -110,6 +110,8 @@ What to learn if you are at that level
     * [ir0nstone - Gadgets](https://ir0nstone.gitbook.io/notes/types/stack/return-oriented-programming/gadgets)
     * [ir0nstone - Calling Conventions](https://ir0nstone.gitbook.io/notes/types/stack/return-oriented-programming/calling-conventions)
     * [ExploitDB Paper on ROP](https://www.exploit-db.com/docs/english/28479-return-oriented-programming-(rop-ftw).pdf)
+    * [libc database for when not provided](https://libc.blukat.me/)
+    * [Python library that implements libc database](https://github.com/guyinatuxedo/The_Night)
     </details>
 * Syscalls
     <details>
@@ -142,6 +144,11 @@ What to learn if you are at that level
     * [ir0nstone - Packing](https://ir0nstone.gitbook.io/notes/other/pwntools/packing)
     </details>
 * One_gadget
+    <details>
+        <summary><i>Resources</i></summary>
+
+    * [One_Gadget GitHub Repo](https://github.com/david942j/one_gadget)
+    </details>
 
 ### Attacks
 * Can perform simple, textbook attacks
@@ -154,6 +161,8 @@ What to learn if you are at that level
         * (Example) [HTB Cyber Apocalypse 2022 - Going Deeper problem (flow redirection)](https://heinandre.no/htb-cyber-apocalypse-2022/pwn/space-pirate-going-deeper/)
         * (Example) [CSAW '16 - Warmup problem (ret2win)](https://github.com/hoppersroppers/nightmare/tree/master/modules/04-Overflows/05-bof_callfunction/csaw16_warmup)
         * (Example) [CSAW '18 - Get It problem (ret2win)](https://github.com/hoppersroppers/nightmare/tree/master/modules/04-Overflows/05-bof_callfunction/csaw18_getit)
+        * (Example) [Tamu '19 - pwn2 problem (partial overwrite, ret2win)](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc/15-partial_overwrite/tamu19_pwn2)
+        * (Example) [TUCTF '17 - Vulnchat2 problem (partial overwrite, ret2win)](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc/15-partial_overwrite/tuctf17_vulnchat2)
         </details>
     * Non-`%n` format string attacks
         <details>
@@ -161,14 +170,20 @@ What to learn if you are at that level
 
         * [ir0nstone - Format string attacks](https://ir0nstone.gitbook.io/notes/types/stack/format-string)
         * (Example) [PicoCTF '18 - Echo](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc/10-fmt_strings/pico18_echo)
-        * (Example) [TUCTF '17 - Vuln Chat problem (format strings + buffer overflow)](https://github.com/hoppersroppers/nightmare/tree/master/modules/04-Overflows/05-bof_callfunction/tu17_vulnchat)
+        * (Example) [TUCTF '17 - Vuln Chat problem (format strings + buffer overflow, ret2win)](https://github.com/hoppersroppers/nightmare/tree/master/modules/04-Overflows/05-bof_callfunction/tu17_vulnchat)
         </details>
     * Ret2libc/Ret2system buffer overflow
         <details>
             <summary><i>Resources</i></summary>
 
         * [ir0nstone - ret2libc](https://ir0nstone.gitbook.io/notes/types/stack/return-oriented-programming/ret2libc)
+        * [Red Teaming Experiments - ret2libc](https://www.ired.team/offensive-security/code-injection-process-injection/binary-exploitation/return-to-libc-ret2libc)
         * [Nightmare/HoppersRoppers - ret2system and ret2libc](https://github.com/hoppersroppers/nightmare/blob/master/modules/06-ROP/unit_07.md)
+        * (Example) [CSAW '19 - Baby Boi](https://github.com/hoppersroppers/nightmare/tree/master/modules/06-ROP/08-bof_dynamic/csaw19_babyboi)
+        * (Example) [ASIS '17 - Mary Morton problem (canary leak, ret2system)](https://github.com/hoppersroppers/nightmare/tree/master/modules/06-ROP/14-ret_2_system/asis17_marymorton)
+        * (Example) [FacebookCTF '19 - Overfloat (ret2libc, ASLR bypass, double exploit)](https://github.com/hoppersroppers/nightmare/tree/master/modules/06-ROP/08-bof_dynamic/fb19_overfloat)
+        * (Example) [HSCTF '19 - Storytime (ret2libc, ASLR bypass, double exploit, brute force libc)](https://github.com/hoppersroppers/nightmare/tree/master/modules/06-ROP/08-bof_dynamic/hs19_storytime)
+        * (Example) [UTC '19 - Shellme (ret2libc, ASLR bypass, double exploit, brute force libc)](https://github.com/hoppersroppers/nightmare/tree/master/modules/06-ROP/08-bof_dynamic/utc19_shellme)
         </details>
     * Shell from syscall
         <details>
@@ -181,28 +196,33 @@ What to learn if you are at that level
         <details>
             <summary><i>Resources</i></summary>
 
-        * (Example) [CSAW '17 - Pilot problem](https://github.com/hoppersroppers/nightmare/tree/master/modules/04-Overflows/06-bof_shellcode/csaw17_pilo)
+        * (Example) [CSAW '17 - Pilot problem](https://github.com/hoppersroppers/nightmare/tree/master/modules/04-Overflows/06-bof_shellcode/csaw17_pilot)
         * (Example) [Tamu '19 - Pwn3 problem](https://github.com/hoppersroppers/nightmare/tree/master/modules/04-Overflows/06-bof_shellcode/tamu19_pwn3)
         * (Example) [TUCTF '18 - Shella Easy problem](https://github.com/hoppersroppers/nightmare/tree/master/modules/04-Overflows/06-bof_shellcode/tu18_shellaeasy)
         </details>
-* Use LD_PRELOAD
+    * Basic integer overflow
+        <details>
+            <summary><i>Resources</i></summary>
+
+        * [HoppersRoppers - Signed/Unsigned Integer Bugs](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc/35-integer_exploitation/signed_unsigned)
+        * (Example) ['sploitFun Vuln (int overflow, ret2win)](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc/35-integer_exploitation/int_overflow_post)
+        * (Example) [Integer Overflow Puzle](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc/35-integer_exploitation/puzzle)
+        </details>
+* Use `LD_PRELOAD` (esp. in ret2libc attacks)
 * Leverage basic info leaks
     <details>
         <summary><i>Resources</i></summary>
 
     * [ir0nstone - PIE info leak](https://ir0nstone.gitbook.io/notes/types/stack/pie/pie-exploit)
     * [ir0nstone - ASLR info leak](https://ir0nstone.gitbook.io/notes/types/stack/aslr/aslr-bypass-with-given-leak)
-    * (Example) [HTB Cyber Apocalypse 2022 - Retribution problem](https://matth.dmz42.org/posts/2022/hackthebox-ctf-cyber-apocalypse-2022-intergalactic-chase-pwn/#1-space-pirate-retribution)
+    * (Example) [HTB Cyber Apocalypse 2022 - Retribution problem (bypass PIE + ASLR, ret2libc)](https://matth.dmz42.org/posts/2022/hackthebox-ctf-cyber-apocalypse-2022-intergalactic-chase-pwn/#1-space-pirate-retribution)
     </details>
 * GOT overwrite
     <details>
         <summary><i>Resources</i></summary>
 
     * [ir0nstone - GOT Overwrite](https://ir0nstone.gitbook.io/notes/types/stack/got-overwrite) and [Exploitation](https://ir0nstone.gitbook.io/notes/types/stack/got-overwrite/exploiting-a-got-overwrite)
-    * (Example) [TokyoWesterns '16 - Greeting problem](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc/10-fmt_strings/tw16_greeting)
-    * (Example) [WatevrCTF '19 - Bet Star](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc/10-fmt_strings/watevrctf19_betstar)
     </details>
-* Basic ROP chain
 * Bad seed attacks
     <details>
         <summary><i>Resources</i></summary>
@@ -261,6 +281,11 @@ What to learn if you are at that level
     * https://ir0nstone.gitbook.io/notes/types/heap
     </details>
 * Different architectures (ARM, MIPS, etc.)
+    <details>
+        <summary><i>Resources</i></summary>
+
+    * (Example) [HXP '18 - Poor Canary problem (ARM arch, canary leak, ret2system)](https://github.com/hoppersroppers/nightmare/tree/master/modules/06-ROP/14-ret_2_system/hxp18_poorCanary)
+    </details>
 * Advanced bypasses of defensive techniques (outside of info leak)
     * Bypass canaries
         <details>
@@ -268,7 +293,7 @@ What to learn if you are at that level
 
         * [ir0nstone - Stack canary bypasses](https://ir0nstone.gitbook.io/notes/types/stack/canaries)
         * [Nightmare/HoppersRoppers - Stack smashing and canary bypass](https://github.com/hoppersroppers/nightmare/blob/master/modules/04-Overflows/unit_05.md#stack-smashing-detected)
-        * (Example) [DEFCON Quals '16 - Feedme problem](https://github.com/hoppersroppers/nightmare/tree/master/modules/06-ROP/07-bof_static/dcquals16_feedme)
+        * (Example) [DEFCON Quals '16 - Feedme problem (canary brute force, shell from syscall)](https://github.com/hoppersroppers/nightmare/tree/master/modules/06-ROP/07-bof_static/dcquals16_feedme)
         </details>
     * Bypass ASLR
         <details>
@@ -276,12 +301,14 @@ What to learn if you are at that level
 
         * [Nightmare/HoppersRoppers - Defeating ASLR](https://github.com/hoppersroppers/nightmare/blob/master/modules/04-Overflows/unit_05.md)
         * [Nightmare/HoppersRoppers - Partial Overwrite](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc#partial-overwrite)
+        * (Example) [Hacklu '15 - Stack stuff problem (Partial overwrite)](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc/15-partial_overwrite/hacklu15_stackstuff)
         </details>
 * SROP
     <details>
         <summary><i>Resources</i></summary>
 
     * [ir0nstone - SROP](https://ir0nstone.gitbook.io/notes/types/stack/syscalls/sigreturn-oriented-programming-srop)
+    * [Nightmare/HoppersRoppers - SROP](https://github.com/hoppersroppers/nightmare/blob/master/modules/6.1-MoreROP/readme.md)
     </details>
 * Stack pivoting
     <details>
@@ -301,8 +328,21 @@ What to learn if you are at that level
     
     * [Nightmare/HoppersRoppers - Format strings](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc#format-strings)
     * (Example) [BackdoorCTF '17 - bbpwn problem](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc/10-fmt_strings/backdoor17_bbpwn)
+    * (Example) [WatevrCTF '19 - Bet Star problem (format strings + GOT overwrite, ret2system)](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc/10-fmt_strings/watevrctf19_betstar)
+    * (Example) [TokyoWesterns '16 - Greeting problem (format strings + GOT overwrite, ret2system)](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc/10-fmt_strings/tw16_greeting)
     </details>
-* Advanced buffer overflows
+* Perform attacks using multiple exploit techniques, textbook attacks with a twist, or basic attacks with 2 or more defenses to bypass
+    <details>
+        <summary><i>Resources</i></summary>
+    
+    * (Example) [CSAW Quals '17 - SVC problem (canary leak, ASLR bypass, ret2libc, double exploit)](https://github.com/hoppersroppers/nightmare/tree/master/modules/06-ROP/08-bof_dynamic/csawquals17_svc)
+    </details>
+* Out-of-bounds array index attack
+    <details>
+        <summary><i>Resources</i></summary>
+    
+    * (Example) [TUCTF - Guestbook (PIE bypass through index attack, ret2system)](https://github.com/hoppersroppers/nightmare/tree/master/modules/06-ROP/14-ret_2_system/tu_guestbook)
+    </details>
 
 
 ## Advanced
