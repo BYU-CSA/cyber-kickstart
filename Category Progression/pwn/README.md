@@ -49,7 +49,36 @@ What to learn if you are at that level
 
 ## Beginner
 ### Knowledge
-* How to approach pwn problems
+* Can calculate offsets between functions and addresses in executables and the stack
+* Understand parts of a dynamically-linked binary
+    <details>
+        <summary><i>Resources</i></summary>
+
+    * [ir0nstone - PLT and GOT](https://ir0nstone.gitbook.io/notes/types/stack/aslr/plt_and_got)
+    </details>
+* What an overflow is
+    <details>
+        <summary><i>Resources</i></summary>
+
+    * [Nightmare/HoppersRopper - Overflows](https://github.com/hoppersroppers/nightmare/tree/master/modules/04-Overflows#overflows)
+    * (Example) [CSAW 2018 Quals - Boi](https://github.com/hoppersroppers/nightmare/tree/master/modules/04-Overflows/04-bof_variable/csaw18_boi)
+    </details>
+* Identify vulnerable code
+    <details>
+        <summary><i>Resources</i></summary>
+
+    * (Example) [HTB Cyber Apocalypse 2022 - Entrypoint problem](https://github.com/evyatar9/Writeups/tree/master/CTFs/2022-HTB_Cyber_Apocalypse/Pwn-Space_Pirate_Entrypoint)
+    * (Example) [LITCTF 2022 - save_tyger problem](https://ctftime.org/writeup/34652)
+    * (Example) [Tamu '19 - pwn1 problem](https://github.com/hoppersroppers/nightmare/tree/master/modules/04-Overflows/04-bof_variable/tamu19_pwn1)
+    * (Example) [TokyoWesterns 2017 - Just Do It! problem](https://github.com/hoppersroppers/nightmare/tree/master/modules/04-Overflows/04-bof_variable/tw17_justdoit)
+    </details>
+* Basic shellcode
+    <details>
+        <summary><i>Resources</i></summary>
+
+    * [Nightmare/HoppersRoppers - Shellcode](https://github.com/hoppersroppers/nightmare/blob/master/modules/04-Overflows/unit_03_shell.md)
+    * [ir0nstone - Using NOPs in shellcode](https://ir0nstone.gitbook.io/notes/types/stack/nops)
+    </details>
 * Understand what various security measures can be taken to secure binaries (introduction)
     * ASLR/PIE
         <details>
@@ -60,6 +89,11 @@ What to learn if you are at that level
         * [Nightmare/HoppersRoppers - ASLR/PIE](https://github.com/hoppersroppers/nightmare/blob/master/modules/04-Overflows/5.1-mitigation_aslr_pie/readme.md)
         </details>
     * NX
+        <details>
+            <summary><i>Resources</i></summary>
+
+        * [Nightmare/HoppersRoppers - NX/DEP and Why ROP Exists](https://github.com/hoppersroppers/nightmare/blob/master/modules/06-ROP/07_lecture.pdf)
+        </details>
     * Stack canaries
     * RELRO
         <details>
@@ -67,12 +101,7 @@ What to learn if you are at that level
 
         * [ir0nstone - RELRO](https://ir0nstone.gitbook.io/notes/types/stack/relro)
         </details>
-* Understand parts of a dynamically-linked binary
-    <details>
-        <summary><i>Resources</i></summary>
-
-    * [ir0nstone - PLT and GOT](https://ir0nstone.gitbook.io/notes/types/stack/aslr/plt_and_got)
-    </details>
+* How to approach pwn problems
 * Understanding gadgets and return-oriented programming (ROP)
     <details>
         <summary><i>Resources</i></summary>
@@ -80,34 +109,28 @@ What to learn if you are at that level
     * [ir0nstone - ROP](https://ir0nstone.gitbook.io/notes/types/stack/return-oriented-programming)
     * [ir0nstone - Gadgets](https://ir0nstone.gitbook.io/notes/types/stack/return-oriented-programming/gadgets)
     * [ir0nstone - Calling Conventions](https://ir0nstone.gitbook.io/notes/types/stack/return-oriented-programming/calling-conventions)
+    * [ExploitDB Paper on ROP](https://www.exploit-db.com/docs/english/28479-return-oriented-programming-(rop-ftw).pdf)
     </details>
-* Can calculate offsets between functions and addresses in executables and the stack
-* What an overflow is
+* Syscalls
     <details>
         <summary><i>Resources</i></summary>
-
-    * [Nightmare/HoppersRopper - Overflows](https://github.com/hoppersroppers/nightmare/tree/master/modules/04-Overflows#overflows)
-    </details>
-* Identify vulnerable code
-    <details>
-        <summary><i>Resources</i></summary>
-
-    * [HTB Cyber Apocalypse 2022 - Entrypoint problem](https://github.com/evyatar9/Writeups/tree/master/CTFs/2022-HTB_Cyber_Apocalypse/Pwn-Space_Pirate_Entrypoint)
-    * [LITCTF 2022 - save_tyger problem](https://ctftime.org/writeup/34652)
+    
+    * [ir0nstone - Syscalls](https://ir0nstone.gitbook.io/notes/types/stack/syscalls)
+    * [Linux x86_64 Syscall Table](https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/)
     </details>
 
 ### Tools
-* GDB
-    <details>
-        <summary><i>Resources</i></summary>
-
-    * [Nightmare/HopperRoppers - GDB](https://github.com/hoppersroppers/nightmare/blob/master/modules/02-intro_tooling/gdb-unit_02.md)
-    </details>
 * Ghidra
     <details>
         <summary><i>Resources</i></summary>
 
     * [Nightmare/HopperRoppers - Ghidra](https://github.com/hoppersroppers/nightmare/blob/master/modules/02-intro_tooling/ghidra/readme.md)
+    </details>
+* GDB
+    <details>
+        <summary><i>Resources</i></summary>
+
+    * [Nightmare/HopperRoppers - GDB](https://github.com/hoppersroppers/nightmare/blob/master/modules/02-intro_tooling/gdb-unit_02.md)
     </details>
 * Pwntools - basic features
     <details>
@@ -127,20 +150,40 @@ What to learn if you are at that level
             <summary><i>Resources</i></summary>
 
         * [ir0nstone - ret2win](https://ir0nstone.gitbook.io/notes/types/stack/ret2win)
-        * [LITCTF 2022 - save_tyger2 problem (ret2win)](https://github.com/CTF-Team-PlusPlusC/LITCTF2022-Writeups/tree/main/save_tyger2)
-        * [HTB Cyber Apocalypse 2022 - Going Deeper problem (flow redirection)](https://heinandre.no/htb-cyber-apocalypse-2022/pwn/space-pirate-going-deeper/)
+        * (Example) [LITCTF 2022 - save_tyger2 problem (ret2win)](https://github.com/CTF-Team-PlusPlusC/LITCTF2022-Writeups/tree/main/save_tyger2)
+        * (Example) [HTB Cyber Apocalypse 2022 - Going Deeper problem (flow redirection)](https://heinandre.no/htb-cyber-apocalypse-2022/pwn/space-pirate-going-deeper/)
+        * (Example) [CSAW '16 - Warmup problem (ret2win)](https://github.com/hoppersroppers/nightmare/tree/master/modules/04-Overflows/05-bof_callfunction/csaw16_warmup)
+        * (Example) [CSAW '18 - Get It problem (ret2win)](https://github.com/hoppersroppers/nightmare/tree/master/modules/04-Overflows/05-bof_callfunction/csaw18_getit)
         </details>
     * Non-`%n` format string attacks
         <details>
             <summary><i>Resources</i></summary>
 
         * [ir0nstone - Format string attacks](https://ir0nstone.gitbook.io/notes/types/stack/format-string)
+        * (Example) [PicoCTF '18 - Echo](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc/10-fmt_strings/pico18_echo)
+        * (Example) [TUCTF '17 - Vuln Chat problem (format strings + buffer overflow)](https://github.com/hoppersroppers/nightmare/tree/master/modules/04-Overflows/05-bof_callfunction/tu17_vulnchat)
         </details>
-    * Ret2libc w/ one_gadget
+    * Ret2libc/Ret2system buffer overflow
         <details>
             <summary><i>Resources</i></summary>
 
         * [ir0nstone - ret2libc](https://ir0nstone.gitbook.io/notes/types/stack/return-oriented-programming/ret2libc)
+        * [Nightmare/HoppersRoppers - ret2system and ret2libc](https://github.com/hoppersroppers/nightmare/blob/master/modules/06-ROP/unit_07.md)
+        </details>
+    * Shell from syscall
+        <details>
+            <summary><i>Resources</i></summary>
+
+        * (Example) [DEFCON Quals '19 - Speedrun 1 problem](https://github.com/hoppersroppers/nightmare/tree/master/modules/06-ROP/07-bof_static/dcquals19_speedrun1)
+        * (Example) [BostonKeyPart2016 - Simple Calc problem](https://github.com/hoppersroppers/nightmare/tree/master/modules/06-ROP/07-bof_static/bkp16_simplecalc)
+        </details>
+    * Run shellcode on stack
+        <details>
+            <summary><i>Resources</i></summary>
+
+        * (Example) [CSAW '17 - Pilot problem](https://github.com/hoppersroppers/nightmare/tree/master/modules/04-Overflows/06-bof_shellcode/csaw17_pilo)
+        * (Example) [Tamu '19 - Pwn3 problem](https://github.com/hoppersroppers/nightmare/tree/master/modules/04-Overflows/06-bof_shellcode/tamu19_pwn3)
+        * (Example) [TUCTF '18 - Shella Easy problem](https://github.com/hoppersroppers/nightmare/tree/master/modules/04-Overflows/06-bof_shellcode/tu18_shellaeasy)
         </details>
 * Use LD_PRELOAD
 * Leverage basic info leaks
@@ -149,13 +192,15 @@ What to learn if you are at that level
 
     * [ir0nstone - PIE info leak](https://ir0nstone.gitbook.io/notes/types/stack/pie/pie-exploit)
     * [ir0nstone - ASLR info leak](https://ir0nstone.gitbook.io/notes/types/stack/aslr/aslr-bypass-with-given-leak)
-    * [HTB Cyber Apocalypse 2022 - Retribution problem](https://matth.dmz42.org/posts/2022/hackthebox-ctf-cyber-apocalypse-2022-intergalactic-chase-pwn/#1-space-pirate-retribution)
+    * (Example) [HTB Cyber Apocalypse 2022 - Retribution problem](https://matth.dmz42.org/posts/2022/hackthebox-ctf-cyber-apocalypse-2022-intergalactic-chase-pwn/#1-space-pirate-retribution)
     </details>
 * GOT overwrite
     <details>
         <summary><i>Resources</i></summary>
 
     * [ir0nstone - GOT Overwrite](https://ir0nstone.gitbook.io/notes/types/stack/got-overwrite) and [Exploitation](https://ir0nstone.gitbook.io/notes/types/stack/got-overwrite/exploiting-a-got-overwrite)
+    * (Example) [TokyoWesterns '16 - Greeting problem](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc/10-fmt_strings/tw16_greeting)
+    * (Example) [WatevrCTF '19 - Bet Star](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc/10-fmt_strings/watevrctf19_betstar)
     </details>
 * Basic ROP chain
 * Bad seed attacks
@@ -163,27 +208,25 @@ What to learn if you are at that level
         <summary><i>Resources</i></summary>
 
     * [Nightmare/HoppersRoppers - Bad Seed](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc#bad-seed)
+    * (Example) [H3 Time problem](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc/09-bad_seed/h3_time)
+    * (Example) [HSCTF '19 - Tux Talk Show problem](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc/09-bad_seed/hsctf19_tuxtalkshow)
+    * (Example) [SunshineCTF '17 - Prepared problem](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc/09-bad_seed/sunshinectf17_prepared)
     </details>
 
 
 ## Intermediate
 ### Knowledge
-* Syscalls
-    <details>
-        <summary><i>Resources</i></summary>
-    
-    * [ir0nstone - Syscalls](https://ir0nstone.gitbook.io/notes/types/stack/syscalls)
-    * [Linux x86_64 Syscall Table](https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/)
-    </details>
 * Different architectures (ARM, MIPS, etc.)
 * Heap stuff
-* Shellcode
+* Advanced Shellcode
     <details>
         <summary><i>Resources</i></summary>
     
-    * [Nightmare/HoppersRoppers - Shellcode](https://github.com/hoppersroppers/nightmare/blob/master/modules/04-Overflows/unit_03_shell.md)
-    * [ir0nstone - Reliable shellcode](https://ir0nstone.gitbook.io/notes/types/stack/relro)
+    * [ir0nstone - Reliable shellcode](https://ir0nstone.gitbook.io/notes/types/stack/reliable-shellcode)
     * [Nightmare/HoppersRopper - Shellcode variations](https://github.com/hoppersroppers/nightmare/blob/master/modules/04-Overflows/unit_04.md)
+    * (Example) [CSAW '18 - Shellpointcode problem](https://github.com/hoppersroppers/nightmare/tree/master/modules/04-Overflows/19-shellcoding_pt1/csaw18_shellpointcode)
+    * (Example) [DEFCON Quals '19 - Speedrun 3 problem](https://github.com/hoppersroppers/nightmare/tree/master/modules/04-Overflows/19-shellcoding_pt1/defconquals19_s3)
+    * (Example) [DEFCON Quals '19 - Speedrun 6 problem](https://github.com/hoppersroppers/nightmare/tree/master/modules/04-Overflows/19-shellcoding_pt1/defconquals19_s6)
     </details>
 * Tracing
     <details>
@@ -191,7 +234,7 @@ What to learn if you are at that level
     
     * [Nightmare/HopperRoppers - ptrace](https://github.com/hoppersroppers/nightmare/blob/master/modules/02-intro_tooling/ptraceLesson.md)
     </details>
-* 
+
 
 ### Tools
 * Pwntools - advanced features
@@ -204,7 +247,6 @@ What to learn if you are at that level
     * [pwntools docs - ASM](https://docs.pwntools.com/en/stable/asm.html)
     * [pwntools docs - Shellcraft](https://docs.pwntools.com/en/stable/shellcraft.html)
     * [ir0nstone - Shellcode example](https://ir0nstone.gitbook.io/notes/types/stack/shellcode)
-    * [ir0nstone - Using NOPs in shellcode](https://ir0nstone.gitbook.io/notes/types/stack/nops)
     </details>
 * GEF
 * Ropper
@@ -218,7 +260,6 @@ What to learn if you are at that level
 
     * https://ir0nstone.gitbook.io/notes/types/heap
     </details>
-* Can use gadgets form custom ROP chains
 * Different architectures (ARM, MIPS, etc.)
 * Advanced bypasses of defensive techniques (outside of info leak)
     * Bypass canaries
@@ -227,6 +268,7 @@ What to learn if you are at that level
 
         * [ir0nstone - Stack canary bypasses](https://ir0nstone.gitbook.io/notes/types/stack/canaries)
         * [Nightmare/HoppersRoppers - Stack smashing and canary bypass](https://github.com/hoppersroppers/nightmare/blob/master/modules/04-Overflows/unit_05.md#stack-smashing-detected)
+        * (Example) [DEFCON Quals '16 - Feedme problem](https://github.com/hoppersroppers/nightmare/tree/master/modules/06-ROP/07-bof_static/dcquals16_feedme)
         </details>
     * Bypass ASLR
         <details>
@@ -258,7 +300,9 @@ What to learn if you are at that level
         <summary><i>Resources</i></summary>
     
     * [Nightmare/HoppersRoppers - Format strings](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc#format-strings)
+    * (Example) [BackdoorCTF '17 - bbpwn problem](https://github.com/hoppersroppers/nightmare/tree/master/modules/05-CriticalMisc/10-fmt_strings/backdoor17_bbpwn)
     </details>
+* Advanced buffer overflows
 
 
 ## Advanced
