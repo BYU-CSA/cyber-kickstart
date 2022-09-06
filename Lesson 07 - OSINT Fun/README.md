@@ -1,6 +1,8 @@
 # Lesson 7 - OSINT Fun
 OSINT stands for Open Source INTelligence, which is a methodology for collecting, analyzing, and making decisions based on data accessible through publicly available sources. It gives us additional information for [social engineering pretext](https://www.csoonline.com/article/3546299/what-is-pretexting-definition-examples-and-prevention.html), pentesting vectors, and general problem solving.
 
+The common theory behidn OSINT is that everything available online has value and can be combined to create an aggregate sum of information. Learning how to identify what data is available, how it is available and how it can be used are three core tenets to leveraging OSINT. 
+
 ## Common Tools
 * [OSINT Framework](https://osintframework.com/)
   * A collection of resources used in OSINT, sorted by category (usernames, emails, public records, etc.)
