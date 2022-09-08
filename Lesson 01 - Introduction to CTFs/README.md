@@ -11,11 +11,11 @@ What do you want to learn? We've already included a list of [future topics](http
 The most common type of CTF, and the type we do here at BYU, is ___Jeapordy-style___ CTFs. In a jeapordy style CTF, you have an online portal with multiple challenges. It looks something like this: 
   
     
-![Image of the CTF portal](PORTAL_VIEW_CTF.png)
+![Image of the CTF portal](Portal_View_CTF.jpg)
 
 Each challenge you click on will show both a description of the challenge and a text box for inserting the flag. Follow what the description says, find the flag, and come back and put it in this box. Here is an example of an individual challenge with the submission box:
 
-![Image of an individual challenge on a CTF portal](Individual_Challenge_CTF.png)
+![Image of an individual challenge on a CTF portal](Individual_Challenge_CTF.jpg)
 
 The screen will tell you if the flag is correct.   
 These online CTF portals usually also have a scoreboard so you can see the ranking of your team.
