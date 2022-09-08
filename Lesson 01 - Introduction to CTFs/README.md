@@ -67,3 +67,13 @@ CTF time is a global scoreboard of all the CTF teams in the world. The BYU team,
 * [View BYU Cyberia team profile](https://ctftime.org/team/155711)
 
 * [View global leaderboard](https://ctftime.org/stats/)
+
+# Practice
+Let's jump right in! We will give a walkthrough of some of the following CTF problems. This is on [picoCTF](https://play.picoctf.org/). To follow along, you'll need to make your own picoCTF account. 
+
+- [Crypto - Mod 26](https://play.picoctf.org/practice/challenge/144?category=2&page=1&search=)
+- [Web Exploitation - Cookies](https://play.picoctf.org/practice/challenge/173?category=1&page=1&search=)
+- [Reverse Engineering - Transformation](https://play.picoctf.org/practice/challenge/104?category=3&page=1&search=)
+- [Forensics - Information](https://play.picoctf.org/practice/challenge/186?category=4&page=1&search=)
+- [Binary exploitation - Stonks](https://play.picoctf.org/practice/challenge/105?category=6&page=1&search=)
+- [Misc - strings](https://play.picoctf.org/practice/challenge/37?category=5&page=1&search=) (Hint: Linux is ___really___ good at this!)
