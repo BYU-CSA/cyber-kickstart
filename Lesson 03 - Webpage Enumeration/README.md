@@ -59,6 +59,12 @@ Looking for an example? Try scraping http://books.toscrape.com/, a website desig
 ## Dirb/DirBuster
 Dirb and DirBuster are two applications used to enumerate webpages and web directories by brute-forcing or using dictionaries. Dirb is a command line tool, while DirBuster is a Java-based GUI. Either one works, but we'll cover Dirb today.
 
+To install dirb on Linux, run these commands:
+```bash
+sudo apt update
+sudo apt install dirb
+```
+
 ### Help and Examples
 Here is a screenshot of the help screen for dirb. Notice the examples at the bottom.
 <img src="dirbHelp.png">
@@ -68,9 +74,38 @@ Do you want to find a site to try this on? Try it on Justin's personal website, 
 
 If it finds a webpage, it just gives you the response code and size of the response. If it finds a directory, it makes a note of it and then restarts the search inside of the directory again. 
 
-You can also specify extensions using the `-X` option and a dictionary to try. My favorite is `/usr/share/dirb/wordlists/common.txt`. The command to try this on Justin's website would then be `dirb https://justinapplegate.me /usr/share/dirb/wordlists/common.txt`.
+To install dirb, run this command:
+
+
+You can also specify extensions using the `-X` option and a dictionary to try. My favorite is `/usr/share/dirb/wordlists/common.txt`. The command to try this on Justin's website would then be 
+
+```bash
+dirb https://justinapplegate.me /usr/share/dirb/wordlists/common.txt
+```
+
+## Sublist3r
+
+[Sublister](https://www.geeksforgeeks.org/what-is-sublist3r-and-how-to-use-it/) is a tool designed in python and uses OSINT in order to enumerate subdomains of websites. It helps pen-testers in collecting and gathering subdomains for a domain which is their target. In order to fetch the accurate results, sublilster uses many search engines like Google, Yahoo, etc. and even tools like Netcraft, Virustotal, etc.
+
+
+To run Sublist3r, you will need Python installed and working on your device. After you have python working, run these linux commands to install Sublist3r:
+```bash
+git clone https://github.com/aboul3la/Sublist3r.git
+cd Sublist3r
+pip install -r requirements.txt
+```
+
+And to run the tool:
+```bash
+./sublister.py -d exampledomain.com
+```
+Here is what the output of the tool looks like:
+
+<img src="SublisterExample.jpg">
+
+Since this tool doesn't actually touch the website and only uses OSINT, there is no way for the system owner to know you are doing reconnaissance on their website. Stealthy stuff!
 
 ## Authentication
-Hopefully, these 3 different techniques have shown you how *difficult* it is to hide pages on a website. This is why obfuscation isn't secure - although it's harder to find the pages, once someone finds a link to it or brute forces it, the game's over. Always rely on authentication instead of obfuscation. 
+Hopefully, these different techniques have shown you how *difficult* it is to hide pages on a website. This is why obfuscation isn't secure - although it's harder to find the pages, once someone finds a link to it or brute forces it, the game's over. Always rely on authentication instead of obfuscation. 
 
 Also, just in case you think they'll never your hidden webpage because it's 143 randomly-generated characters, isn't linked anywhere on the web, and isn't on your robots.txt file, there are other methods to find these pages, including extracting your search history on your browser and logging all of the "referrer" sites in your HTTP header. This means that when you visit a website, your browser will tell that new website which site you were on before. So you can be careful, but all it takes is ONE slip up and you lose.
