@@ -1,8 +1,8 @@
 ## LSB
 This is a common steganography tool used to hide data (text, black+white photos, or color photos) in bits of an image. Look at the LSB Steganography.pptx file to learn about *HOW* LSB steg works. Then, look at some of the examples:
 
-* [Before hiding data](https://raw.githubusercontent.com/JustinApplegate/ctf-training/main/Lesson%201%20-%20Introduction%20to%20CTFs/boston-skyline.png)
-* [After hiding data](https://raw.githubusercontent.com/JustinApplegate/ctf-training/main/Lesson%201%20-%20Introduction%20to%20CTFs/txt-em-boston.png)
+* [Before hiding data](boston-skyline.png)
+* [After hiding data](txt-em-boston.png)
 
 **Tools:**
 * Website for text/black&white photo LSB - https://stegonline.georgeom.net/upload
