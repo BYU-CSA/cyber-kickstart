@@ -1,0 +1,41 @@
+ls
+ls -al
+whoami
+pwd
+cd ..
+ls
+cd root
+ls -al
+echo $HISTFILE
+ls
+sudo user add malcom
+useradd malcom
+passwd malcom
+useradd admin
+passwd admin
+usermod -aG wheel admin
+groups root
+usermod -aG root admin
+ping 1.1.1.1
+ping 8.8.8.8
+pwd
+cd ~
+ls
+pwd
+cd /var
+ls
+cd /var
+ls
+cd log
+ls
+tail auth.log
+nano auth.log
+rm auth.log
+ls
+rm auth.log.1
+cd ..
+ls
+cd ..
+ls
+exit
+
