@@ -15,7 +15,7 @@ If you find suspicious code and you don't know what it does, either run the code
 5. Check strings in the program
 6. Check conditionals (if statements)
 
-*Notice: when running a program from the command line, the program passes command-line arguments in the `sys.argv` array. 
+*Notice: when running a program from the command line, the program passes command-line arguments in the `sys.argv` array. This array is accessible in the program at run-time.
 
 For example, in the command
 ```linux
@@ -29,6 +29,7 @@ python3 combine.py Amanda Green
 
 etc.
 
+Sys.argv[] is exclusive to Python, but other languages have similar concepts. [C++ uses argc and argv](https://www.geeksforgeeks.org/command-line-arguments-in-c-cpp/)
 
 ## JavaScript Reverse Engineering
 
