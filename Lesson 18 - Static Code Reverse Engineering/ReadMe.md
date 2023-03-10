@@ -50,4 +50,5 @@ Since JavaScript is so often obfuscated for both benign and malicious purpose, t
 ## Python Reverse Engineering
 ### Practice Reverse Engineering Python
 
-= [reversePython2.py](reversePython2.py)
+- [reversePython1.py](reversePython1.py)
+-  [reversePython2.py](reversePython2.py)
