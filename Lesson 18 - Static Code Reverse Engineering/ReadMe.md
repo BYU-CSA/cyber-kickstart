@@ -42,3 +42,12 @@ Since JavaScript is so often obfuscated for both benign and malicious purpose, t
 - [HackTheBox JavaScript Deobfuscation Course](https://academy.hackthebox.com/module/41/section/449): A HTB course that teaches JavaScript Deobfuscation and Reverse Engineering techniques. 
 
 
+### Practice Reverse Engineering JavaScript
+- [FakeLoginExample.html](FakeLoginExample.html)
+- [reverseJavaScriptExample.js](reverseJavaScriptExample.js)
+- [reverseJavascriptPractice.js](reverseJavascriptPractice.js)
+
+## Python Reverse Engineering
+### Practice Reverse Engineering Python
+
+= [reversePython2.py](reversePython2.py)
