@@ -52,3 +52,10 @@ Since JavaScript is so often obfuscated for both benign and malicious purpose, t
 
 - [reversePython1.py](reversePython1.py)
 -  [reversePython2.py](reversePython2.py)
+
+
+## Additional Sources
+- [A Quick Guide to Reverse Engineering Malware](https://www.eccouncil.org/cybersecurity-exchange/ethical-hacking/malware-reverse-engineering/): An article on quick steps for reverse engineering malware. This is the most practical use for reverse engineering in the Info Sec industry.
+- [Command Line Arguments in C/C++](https://www.geeksforgeeks.org/command-line-arguments-in-c-cpp/): A GeeksForGeeks article that explains more about how command line arguments can be passed into running code in C and C++. 
+- [Intro to Reverse Engineering with Memory Analysis](https://github.com/BYU-CSA/ctf-training/tree/main/Lesson%2005%20-%20Intro%20to%20Reverse%20Engineering): Another lesson in this Github that has additional information about Reverse Engineering by focusing on the memory execution model.
+- [Introduction to Ghidra](https://github.com/BYU-CSA/ctf-training/tree/main/Lesson%2011%20-%20Ghidra): Another lesson in this GitHub that is an introduction to Ghidra, which is a tool developed and maintained by the NSA that can be used to generate static code from compiled code.
