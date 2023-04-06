@@ -27,7 +27,7 @@ This code indicates that when the form in the HTML is submitted, the information
 **Answer: The credentials are exfiltrated to http[:]//annalanes[.]com/filethisaway/txt.txt (not a real website!)**
 
 ## reverseJavaScriptExample.js
-Goal: Figure out what line 33 will print out
+**Goal: Figure out what line 33 will print out**
 ```javascript
 console['log'](myFunction(0x14, 0xa));
 ```
@@ -51,3 +51,18 @@ We see that this function simply returns the product of the two variables passed
 The rest of the code was simply added as an obfuscation technique and does nothing. By running the code on [jsconsole](https://jsconsole.com/), you can see that the output is indeed 200.
 
 **Answer: The console will output 200.**
+
+## reverseJavascriptPractice.js
+** Goal: find the flag. (The flag format will match the regex `.*{.*}`)**
+
+First put the entire javascript code into [beautifier.io](https://beautifier.io/). It will format it to be a little nicer. One of the key tips for reverse engineering is to check outputs. If you look at the bottom of the beautified JS, you will see:
+```javascript
+const item = ['a', 'n', 'n', 'a', ':', '!', ')', '{', 'x', 'o', 'y', 'g', 's', 's', 'p', 'p', 'g', 'r', 'l', '}'];
+for (let i = 0x0; i < item[_0x361ee1(0x173)]; i++) {
+    item[i] !== 'p' && i % 0x5 != 0x0 && console[_0x361ee1(0x16b)](item[i]);
+}
+```
+
+This is the output statement since we see it has a print console statement. The print console statement conditionals will print any letter in the *item* array that is not equal to 'p' or any item in the array that is not at an indice that is a multiple of 5. If you iterate through the array one by one, you will see that the console will output `nna:){xogssgrl}`
+
+**Answer: the flag is `nna:){xogssgrl}`**
