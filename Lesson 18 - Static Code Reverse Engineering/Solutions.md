@@ -66,3 +66,69 @@ for (let i = 0x0; i < item[_0x361ee1(0x173)]; i++) {
 This is the output statement since we see it has a print console statement. The print console statement conditionals will print any letter in the *item* array that is not equal to 'p' or any item in the array that is not at an indice that is a multiple of 5. If you iterate through the array one by one, you will see that the console will output `nna:){xogssgrl}`
 
 **Answer: the flag is `nna:){xogssgrl}`**
+
+
+# Python
+## reversePython1.py
+Objective: Figure out what command line 32 runs.
+```python
+os.system(command)
+```
+
+See the commented code below to see what each line of the code does.
+
+```python
+#!/usr/bin/python
+
+#import necessary modules
+import sys
+import os
+import codecs
+
+def setDarkMode():
+  # create an array of size 12 that is filled with the value 0
+    screenVector = [0] * 12
+    # create an array (also of size 12) with all these float integer values
+    initialization = [56, 52.5, 55, 51.5, 16, 24.5, 23, 24.5, 23, 24.5, 23, 24.5]
+
+    # iterature through the initialization array
+    for pixel in range(len(initialization)):
+      # the screenVector array becomes equal to the initialization array values multipled by 2
+
+       screen = initialization[pixel] * 2
+       screenVector[pixel] = screen
+
+       # so at the end of the loop, the screenVector array equals = [112,105,110,103,32,49,46,49,46,49,46,49]
+
+    # create an empty string
+    mode = ''
+    # interate through the screenVector array
+    for pixel in range(len(screenVector)):
+      # the chr() function takes a numerical value and turns it into its ASCII equivalent. so 112 is 'p' and 105 is 'i', etc. If you take all the ASCII equivalents of the numbers in the screenVector array, the string becomes 'ping 1.1.1.1'
+       mode += chr(int(screenVector[pixel]))
+
+    return mode 
+    #return the string literal from the function  
+
+
+def main():
+  # if not 2 command line arguments (the file to run <this> and another argument) are passed to the function, print the fatal error 500
+    if len(sys.argv) != 2:
+        print("Fatal error 500")
+        return
+    #if the second argument passed to the commandline, when encoded by rot 13, equals `elhxznyjnertebhc` then print out "exiting"
+    # this means the string we pass needs to be elhxznyjnertebhc decoded by rot 13 which becomes 'ryukmalwaregroup'.
+    # set 'ryukmalwaregroup' as the command line argument to get the code to print 'Exiting'
+    elif (sys.argv[1]) == codecs.decode('elhxznyjnertebhc', 'rot_13'):
+        print("Exiting")
+        return
+    else:
+        command = setDarkMode()
+        # will run the string as a command that setDarkMode() returns, which we established is ping
+        # so this will just run a ping command to 1.1.1.1
+        os.system(command)
+
+# call main function
+if __name__ == "__main__":
+  main()
+```
