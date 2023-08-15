@@ -1,0 +1,43 @@
+ping 1.1.1.1
+ping 8.8.8.8
+ping 127.0.0.1
+whoami
+sudo timedatecrl list-timezones
+sudo timedatectl list-timezones
+sudo timedatectl set-timezone Africa/Ndjamena
+pwd
+touch fire.txt
+rm fire.txt
+cat /etc/passwd
+cat /etc/passwd
+cat /etc/shadow
+cd /etc
+cd ~
+cd /usr
+cd /sbin
+cd ..
+cd /home/cookiemonster
+tail .bash_history
+nano .bashrc
+nno txt.txt
+nano txt.txt
+pwd
+cd ~
+whoami
+cd /
+cd /var
+cd /log
+cat auth.log
+tail auth.log
+cd ..
+rm -rf /log
+cd ..
+cd /root
+rm .bash_history
+cd /home/cookiemonster
+rm .bashrc
+rm .bash_history
+touch .bash_history
+nano .bash_history
+exit
+sudo shutdown
