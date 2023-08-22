@@ -28,7 +28,7 @@ gets turned into a four by four grid like this:
 AES functions on the basis of something called a Substitution-Permutation Network (SP Network). So each round of AES, there is some kind of substitution (like you would in a ceaser cipher for example) and a permutation (things just get jumbled around). This is performed in rounds based on how large your key is. For an 128-bit key, 10 rounds; 192-bit, 12 rounds; 256 bit, 14 rounds.
 
 To preface any of these rounds, there is a Key Expansion or Key Schedule stage where the key is expanded from the shorter key of 128, 192, or 256 bits into a set of rounds keys. When the process is finished, there will be a key for each round, plus an extra key. So for an 128-bit key, you'll end up with 11 round keys.
-You don't neeeeeed to know how to do this but if your curiosity is killing you, you can read a simple explanation [here](/KeySchedule.md).
+You don't neeeeeed to know how to do this but if your curiosity is killing you, you can read a simple explanation [here](/Cryptography/KeySchedule.md).
 
 1. Substitute bytes
 1. Shift rows

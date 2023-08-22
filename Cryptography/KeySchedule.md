@@ -1,7 +1,7 @@
 # AES Key Scheduling
 Key scheduling is a little complicated when you're first learning about it, but it is designed to be a very simple and very quick calculation. You just have to be able to track all the steps that are occuring. The [Wikipedia article](https://en.wikipedia.org/wiki/AES_key_schedule) for Key Scheduling includes a very useful diagram for understanding this, so we'll use that for our concept map as we explain.
 
-![Key Scheduling Diagram](/mdimg/AES-Key_Schedule_128-bit_key.png)
+![Key Scheduling Diagram](/Cryptography/mdimg/AES-Key_Schedule_128-bit_key.png)
 
 We start at the top of the diagram with your initial key, split up into a grid four bytes tall and as many across as are necessary for the key length (the example image here shows a key length of 128, but for 192-bit keys it would be 5 across, and 256-bit keys would be 6 across with the same general process).
 
@@ -23,7 +23,7 @@ RotWord is very simple, you take that one by four grid and shift it over one. Ex
 
 AES has what is called an S-box. This is a grid that has a substitution value for every possibly combination of 8 bits. Here is is:
 
-![S-Box](/mdimg/s-box.png)
+![S-Box](/Cryptography/mdimg/s-box.png)
 
 For example, if the value in your vector (post-rotation) is 8d, you would line up the 80 (also represented frequently by '8X') and the 0d ('Xd'). The resulting value that would replace your 8d, then, would be 5d. Do this for each of your four bytes.
 
