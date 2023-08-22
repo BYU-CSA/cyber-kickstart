@@ -1,7 +1,7 @@
 # AES Key Scheduling
 Key scheduling is a little complicated when you're first learning about it, but it is designed to be a very simple and very quick calculation. You just have to be able to track all the steps that are occuring. The [Wikipedia article](https://en.wikipedia.org/wiki/AES_key_schedule) for Key Scheduling includes a very useful diagram for understanding this, so we'll use that for our concept map as we explain.
 
-![Key Scheduling Diagram](/Cryptography/mdimg/AES-Key_Schedule_128-bit_key.png)
+![Key Scheduling Diagram](/Cryptography/mdimg/AES-Key_Schedule.png)
 
 We start at the top of the diagram with your initial key, split up into a grid four bytes tall and as many across as are necessary for the key length (the example image here shows a key length of 128, but for 192-bit keys it would be 5 across, and 256-bit keys would be 6 across with the same general process).
 
