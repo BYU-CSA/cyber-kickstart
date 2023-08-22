@@ -1,6 +1,4 @@
-# COMMON ENCRYPTION ALGORITHMS
-
-## RSA - Rivest Shamir Adleman
+# RSA - Rivest Shamir Adleman
 Asymmetric Encryption algorithm, uses "commutative" keys to encrypt
 
 Challenge from HSCTF: "What do these numbers mean?"
