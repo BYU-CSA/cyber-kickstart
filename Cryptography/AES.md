@@ -65,9 +65,3 @@ Very first thing, the first round key is used in an xor with your plaintext. The
 1. Round key
 
     The next round key xor'd in.
-
-
-#
-POTENTIAL CHALLENGE: get a key to go through the back half of aes, then decrypt it all the way and they have to push it only through part of aes.
-
-ANOTHER CHALLENGE IDEA: pcap file where a key is sent in plaintext and then aes encrypted text is sent (using the key) in other packets that you have to decrypt
