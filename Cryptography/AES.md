@@ -12,14 +12,8 @@ Symmetric encryption is one of the two main types of encryption, the other being
 * [Cryptohack](https://cryptohack.org/courses/symmetric/aes0/)
 * [cryptopals](https://cryptopals.com/) has some stuff too, start with the Basics
 </details>
-rijndael algorithm (the algorithm name that won the contest)
-AES allows for 128 bit blocks with 128, 192, or 256 bit keys
-OpenSSL has a good implementation of AES
 
-
-Substitution-permutation networks: substitution takes one thing in and puts one thing out (like Ceasar Cipher). Permutation improves that by taking an input and just swapping the bits in a predetermined manner. [Computerphile video](https://youtu.be/DLjzI5dX8jc?si=7YmigjEi77CZKz0i)
-Block cipher: takes a block of a certain size and turns it into an output (ciphertext) of the same size
-
+AES (the Advanced Encryption Standard) is the result of a competition hosted by the US GOvernment back in 2001 and is designed to replace the deprecated DES (separate explanation to come...). It is a slight modification on the Rijndael cipher submitted to the contest and is now used in a significant portion of modern communication. This is how it works
 
 AES functions on the basis of something called a Substitution-Permutation Network ([SP Network](https://youtu.be/DLjzI5dX8jc?si=7YmigjEi77CZKz0i)). 
 So each round of AES, there is some kind of substitution (like you would in a ceaser cipher for example) and a permutation (things just get jumbled around). 
@@ -66,8 +60,16 @@ Very first thing, the first round key is used in an xor with your plaintext. The
 
     The next round key xor'd in.
 
+And that's everything that happens to encrypt one block!
 
-#
-POTENTIAL CHALLENGE: get a key to go through the back half of aes, then decrypt it all the way and they have to push it only through part of aes.
+Because AES is a block cipher, this is done in blocks of 128 bits. So if your message is longer than 128 bits (and almost all of them are), you need a way to continue with the cipher. There are numerous ways to do this and you'll frequently see a couple of them in AES Python scripts because they have vulnerabilities. I'll do my best to explain the main modes of AES and their vulnerabilities but I'll also add a list of resources for you to explore for more information:
 
-ANOTHER CHALLENGE IDEA: pcap file where a key is sent in plaintext and then aes encrypted text is sent (using the key) in other packets that you have to decrypt
+<details>
+    <summary> AES Modes articles</summary>
+
+
+* [highgo](https://www.highgo.ca/2019/08/08/the-difference-in-five-modes-in-the-aes-encryption-algorithm/)
+
+</details>
+
+### UNDER CONSTRUCTION

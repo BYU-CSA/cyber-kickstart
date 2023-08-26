@@ -32,9 +32,9 @@ There's about a dozen images in the Nmap Photos folder that contain tons of diff
 *Tip - pressing keys during a scan will print out a progress report*
 
 ### Examples
-<img src="scan_example.png" width="700">
+<img src="mdimg/scan_example.png" width="700">
 
-<img src="scan_example_2.png">
+<img src="mdimg/scan_example_2.png">
 
 ### Challenges
 There's a site called [ScanMe.nmap.org](http://scanme.nmap.org/) that's designed to be scanned with Nmap. Take a crack at it and see what you find!
@@ -47,7 +47,7 @@ While containers and virtual machines perform similar functions, they are fundam
 
 More specifics about containers and how they are different from VMs can be found [here](https://www.cybersecurity-insiders.com/containers-101-what-do-you-need-to-know/) and [here](https://www.weave.works/blog/a-practical-guide-to-choosing-between-docker-containers-and-vms). 
 
-![Docker vs containers](containers-vs-virtual-machines.jpg)
+![Docker vs containers](mdimg/containers-vs-virtual-machines.jpg)
 
 ### Common Commands
 - `docker load <simple_ctf_docker_image.tar`
