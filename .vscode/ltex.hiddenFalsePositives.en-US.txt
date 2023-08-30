@@ -1,1 +1,0 @@
-{"rule":"EXTREME_ADJECTIVES","sentence":"^\\QThere are many similar search engines, but for whatever reason Bing's is unusually good\nDNS Dumpster\nUsed to pull information about a website or IP address, such as subdomains, where it's hosted, etc.\\E$"}
