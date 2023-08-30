@@ -5,7 +5,7 @@ Computers only know how to deal with 1s and 0s, and that's really hard for us. W
 ## Memory Model
 All programs are executed in memory, but how are they stored? The better you understand that, the better you'll be able to reverse engineer binaries. Below is the memory model:
 
-![Memory model](memory_layout.png)
+![Memory model](mdimg/memory_layout.png)
 
 We're just going to focus on the stack. Now, it may seem counterintuitive, but the stack actually goes from the top to the bottom. There are two registers used to keep track of this - the base pointer and the stack pointer. Each time a function is called by another function, another segment is added to the stack. The top of that segment is the base pointer, and the bottom is the stack pointer. In between is where all the variables are initialized, or in other words space is allocated for them at the beginning of the function based on their type.
 
@@ -65,7 +65,7 @@ This is a binary without the original `.cpp` or `.c` file. Normally, the first s
 
 If you run it with GDB, followed by the `layout asm`, `layout reg`, `break main`, and `run`, you will see something like this:
 
-![GDB layout](gdb.png)
+![GDB layout](mdimg/gdb.png)
 
 If you want to progress through each line of assembly code, use the `ni` instruction. It will execute the highlighted line, and stop before the next one. If it's calling a function (like `printf`, `exit`, `strlen`, or a custom function) and you use `ni`, then it will run the entire function and go to the next line. If you would like to go *inside* that function to see what it does while running, use the `si` command, then more `ni` commands. Once it's finished, it will return back to your original function and you can continue with `ni`, or `continue` to finish until the next breakpoint/end of the program. 
 
@@ -77,3 +77,4 @@ In more complicated files, you'll want to call a function with your own paramete
 * Unrestricted input in binaries can allow you to overwrite values on the stack and insert malicious code - this is called **binary exploitation**, or **pwn**. Micheal has an excellent presentation on the most simple pwn example (which is still difficult) in this repo called "presentation.pdf". 
 * If you're really into low-level stuff like this and want to do more reverse engineering/pwn, Ian stumbled upon a great resource called [Nightmare](https://guyinatuxedo.github.io/) (aptly named!). This contains a series of guides and challenges that explains the processes and techniques of reverse engineering. 
 * If you'd like to start using Ghidra to allow you to do dynamic and static analysis at the same time, [this tutorial](https://www.shogunlab.com/blog/2019/04/12/here-be-dragons-ghidra-0.html) is a great resource!! Ghidra is super important.
+We also have a folder in this GitHub that explains basic Ghidra, adn you can find that [here](/z_Additional%20Resources/Ghidra/)

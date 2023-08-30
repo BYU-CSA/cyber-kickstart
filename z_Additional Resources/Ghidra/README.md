@@ -9,11 +9,11 @@ Before running Ghidra, Java must be installed on the operating system. The [offi
 *Note - I use Ghidra on Windows. To make things easy, I move the uncompressed Ghidra folder into my Documents folder, and then make a shortcut for `ghidraRun.bat` on my Desktop. Whenever I want to use it, I just double click on the Desktop shortcut.*
 
 ## Importing Executables
-<img src="openingScreen.png" width="600px">
+<img src="mdimg/openingScreen.png" width="600px">
 
 Each time Ghidra is opened, the screen above is presented. Each file that is analyzed must be located in a project. Think of projects as folders - you can put as many files/executables in a folder/project as you want. Create a new project if you need. Once a project is created, you can import an executable by clicking "File" --> "Import file" in the top menu. Browse to the location of a file and select it. 
 
-<img src="type_detection.png" width="500px">
+<img src="mdimg/type_detection.png" width="500px">
 
 Once an executable is uploaded, you'll see this screen. Ghidra is smart and will normally detect and tell you the executable type and architecture right here. If you see blanks in these locations instead, your life just got harder and you'll have to manually insert the type of executable. 
 
@@ -24,11 +24,11 @@ Accept it, press "Okay", and now the executable is all loaded and ready to go.
 ## Analyzing Executables
 To analyze a file, you'll want to open it up in the Code Browser. Double click on the file or select the file and click the dragon symbol above it. 
 
-<img src="notAnalyzed.png" width="400px">
+<img src="mdimg/notAnalyzed.png" width="400px">
 
 First thing you'll see is a prompt asking if you want it to analyze the executable. **Answer yes - it's literally asking to do a lot of the hard work**. It will present you with a bunch of decompiling options - select all of them except the ones in red (that say Prototype) and click "Analyze". Ghidra will now pull out a bunch of important information in a format that is more readily available than before.
 
-<img src="codeBrowser.png" width="1000px">
+<img src="mdimg/codeBrowser.png" width="1000px">
 
 The Code Browser has three main sections - the left pane (Program Trees, Symbol Trees, and Data Type Manager), the middle pane (the assembly of the program), and the right pane (decompiled code and defined strings). There are dozens of features and capabilities that Ghidra has to offer, but I'll only highlight a few of the main ones I've used. 
 

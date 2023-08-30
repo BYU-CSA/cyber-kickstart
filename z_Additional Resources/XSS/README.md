@@ -19,18 +19,18 @@ A reflection point is a place on a website where user input is reflected. Some c
 
 This is a login form. If incorrect credentials are supplied, the website may tell you "The username `<inserts username>` is incorrect", so whatever you supply to the form is put out.
 
-<img src="xssReflectedLogin.jpg">
+<img src="mdimg/xssReflectedLogin.jpg">
 
 A more common example is through the URL or its parameters. For example, I typed `fdsa` into the search bar, and you can see my string reflected on the page. This is because it depends on the URL - so if I typed in the url `https://sos.tn.gov/site-search/malicious-input-here`, you'll see `malicious-input-here` on the page. 
 
-<img src="xssReflectedURL.png" width="600px">
+<img src="mdimg/xssReflectedURL.png" width="600px">
 
 ### Stored XSS
 Reflected XSS is more difficult to do because you normally will have to trick a victim into clicking on a malicious link, through phishing emails or other ways. **Stored XSS** has a much higher success rate because if someone goes to a site with stored, malicious input of their own volition, they will receive the payload. For example, if you make a comment on a Facebook post, anyone that sees the Facebook post will see your input. While tricking a victim into going to that page will speed things up, it's not necessary. 
 
 Stored XSS means your user input is stored in some sort of database or file and, whenever a person access that page, your input is retrieved and then displayed. For example, this is a simplistic pastebin site. If you create a public paste, anyone that visits it will then see your malicious input.
 
-<img src="xssStoredPaste.png" width="800px">
+<img src="mdimg/xssStoredPaste.png" width="800px">
 
 ## Insert Javascript
 Once you have found a reflection point, you need to determine if you can inject Javascript into the page. This part is often very tricky, as there are various methods (effective and ineffective) of filtering Javascript. 
