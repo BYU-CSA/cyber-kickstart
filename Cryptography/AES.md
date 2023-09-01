@@ -73,3 +73,17 @@ Because AES is a block cipher, this is done in blocks of 128 bits. So if your me
 </details>
 
 ### UNDER CONSTRUCTION
+
+1. AES-ECB (Electronic Code Book)
+
+This mode is the simplest of all of them, and therefore the most insecure. The way it functions is each block of text is encrypted with the same key. So your first block gets encrypted, then you set it aside completely and encrypt your second block, which you then set aside to encrypt your third block. 
+
+![ECB diagram](mdimg/ECB_encryption.png)
+
+This can be attacked in a number of ways because there is no randomization in the way it encrypts. This is painfully obvious when you place two images next to each other, the original, and one that has been encrypted with AES-ECB. An ideal encryption should leave the encrypted version giving no semblance of the original. 
+
+<img src="mdimg/ogimg.png" width="200"> <img src="mdimg/ecbimg.png" width="200">
+
+I won't spoil your fun by telling you how to crack it, but there's a fantastic CTF challenge on Cryptohack called [ECB Oracle](https://cryptohack.org/courses/symmetric/ecb_oracle/) that deals with a weakness in ECB encryption
+
+1. AES-CBC (Cipher Block Chaining)

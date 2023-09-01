@@ -1,4 +1,8 @@
 # RSA - Rivest Shamir Adleman
+
+THIS WHOLE PAGE IS UNDER CONSTRUCTION BE WARNED lol
+
+
 Asymmetric Encryption algorithm, uses "commutative" keys to encrypt
 
 Challenge from HSCTF: "What do these numbers mean?"
@@ -65,3 +69,5 @@ Add specific code with three back ticks and you can specify the language
 x = 10
 ```
 Three or more hyphens, asterisks or underscores will create a division in the page just a big line
+
+PEM key structure
