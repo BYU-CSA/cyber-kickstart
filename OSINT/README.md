@@ -25,7 +25,7 @@ Beginners to the CTF world often find OSINT the easiest challenge category to br
 
 ## Practice Challenges
 
-```
+```md
 Buckeye Billy Baggage (BYU EOS CTF 2022)
 --------
 Like a good college student, Buckeye Billy has a great affinity for puzzles, eating right and traveling. In a very college-student-like move, he is often found multitasking. He forgot to tell his roommates where he was off to. Luckily, they found this picture, but it makes no sense. Can you help us find him?
@@ -36,7 +36,7 @@ flag: byuctf{name_of_landmark}
 Writeup: https://github.com/BYU-CSA/old-ctf-challenges/blob/master/OSINT/Buckeye%20Billy%20Baggage/Buckeye%20Billy%20Baggage.md
 ```
 
-```
+```md
 Part of the ship... (SDCTF 2022)
 --------
 Sometimes I worry about my friend... he's way too into memes, he's always smiling, and he's always spouting nonsense about some "forbidden app." I don't know what he's talking about, but maybe you can help me figure it out! All I know is a username he used way back in the day. Good luck! Flag format is sdctf{flag}  
@@ -45,7 +45,7 @@ Username: DanFlashes
 Writeup: https://ctftime.org/writeup/33767
 ```
 
-```
+```md
 These People Have No Idea (Unpublished)
 --------
 These two pictures were taken in Provo UT from the exact same position facing different directions. What is the exact address of the house?
