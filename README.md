@@ -1,7 +1,7 @@
 # BYU Weekly CTF Training
 This GitHub repository is used to store lessons for CTF training group meetings held regularly at Brigham Young University in Provo. Each folder contains files, scripts, links, and more for a lesson. We've provided this resource so that new members can see old lessons, follow along with current lessons, and review lessons after the actual training hour. 
 
-Meetings are held each Friday from 5:00 PM - 6:00 PM MST, in room 385 in the Crabtree. If you're a student here, we'd love to have you join us!
+Meetings are held each Friday from 5:00 PM - 6:00 PM MST, in room 365 in the Crabtree. If you're a student here, we'd love to have you join us!
 
 If there are skills you'd like to learn or resources you want to share, let us know in the Slack workspace, and we'll add it on!
 
