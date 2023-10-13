@@ -1,111 +1,51 @@
 # Lesson 3 - Website Enumeration
-Website enumeration is figuring out what pages exist on a website using different methods. We will be covering 3 different methods to enumerate (or find) as many pages on a website as possible. 
+When given a web based CTF challenge, your very first step is to do what we call "enumeration". This basically means that you need to analyze and understand your environment to look for weaknesses or clues about the flag.  
 
-## Robots.txt
-Whenever you get a result from a search engine (Google, Bing, etc.), the engine pulls data from it's database of indexed pages. How did it get this database? Each search engine has 1 or more crawlers that effectively visit and index information about every webpage they can find. These crawlers are robots that access a page, find all the links on it, and visit each of those pages following the same protocol. 
+### Basic Website Structure
 
-This can bring up some security issues - what if you want a webpage on your site, but you don't want a search engine crawler to index it, meaning it will never show up in any search engine results? Everyone thinks that [creating a robots.txt page](https://developers.google.com/search/docs/advanced/robots/intro) will do that; it doesn't work very well.
+The first critical thing that you need to understand about most websites is that they're organized in a file structure, just like you're used to on your personal computer. The landing page for the website is like the root directory, and all other pages are organized into folders and subfolders. 
 
-Here's an example robots.txt file:
+Take, for example, [churchofjesuschrist.org](https://www.churchofjesuschrist.org/?lang=eng). If I just go to the main website I only see the domain name in the address bar:
+<img src="name_without_path.png">
 
-```
-User-agent: Googlebot
-Disallow: /nogooglebot/
+However, if I go to the Book of Mormon page, I can clearly see that I'm in the `bofm` folder, which is in the `scriptures` folder, which is in the `study` folder. 
+<img src="name_with_path.png">
 
-User-agent: *
-Allow: /
-```
+With this context we can understand that one of our biggest tasks when enumerating websites is discovering every possible page that we can, because we never know which one might hold the flag or vulnerability. This becomes more difficult because unless we have an explicit link to a page (or the website is configured incorrectly) we only see what the site administrator wants us to. 
 
-This robots.txt file, always stored in the base directory (ie https://mywebsite.com/robots.txt), says that Google's crawler called Googlebot (note that Google has multiple crawlers) shouldn't access anything in the /nogooglebot/ directory, but everything else is free game. Any other crawlers can access anything on the site. 
+Unless of course, we're hackers and can get around that ;)
 
-### Issues with robots.txt
-First off, the robots.txt file is **just a suggestion**. It's asking the crawlers to follow these rules, but it can't enforce it. In fact, malicious crawlers can access these pages specifically to figure out what little secrets you're trying to hide. So, trying to hide a page by putting it in robots.txt is an **AWFUL** idea because you're practically telling everyone where all your dirty little secrets are. This is why it's *never* a good idea to hide sensitive pages with this - only use robots.txt for nonsensitive pages that you don't want indexed or have too much traffic.
+## Common Tools and Strategies
 
-### Example
-The flag for a [CTFlearn challenge](https://ctflearn.com/challenge/107) can be found by accessing their [robots.txt page](https://ctflearn.com/robots.txt). 
+* [robots.txt](https://developers.google.com/search/docs/crawling-indexing/robots/intro)
+    * While not a tool in the strictest sense, `robots.txt` is always the first thing we want to try on any website that we're given. The link above can give more details, but essentially robots.txt is a text file placed in the root directory of a website that tells a search engine crawler what pages to index or not. While helpful to reduce traffic on a certain page, trying to hide a page by putting it in `robots.txt` is an **AWFUL** idea because you're practically telling everyone where all your dirty little secrets are. Fortunately for us, lots of websites still do this, so we can find our way directly to sensitive sites by checking `robots.txt`. 
+* [Browser Elements Tab](https://webkit.org/web-inspector/elements-tab/)
+    * The elements tab allows you to directly view the DOM (Document Access Model) of your web page. Essentially, every element you see on the web page is represented in code in the elements tab. You can also [view the straight up raw source code](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html) to get even more information. [This forum post](https://stackoverflow.com/questions/18967324/difference-between-source-code-and-inspect-element) explains the difference. 
+* [Browser Console Tab](https://www.javascripttutorial.net/web-development-tools/)
+    * Javascript is the client side scripting language of the web, and the console tab is essentially your terminal for it. It is here that you can input JS commands to a web page that you're looking at, or for the purposes of this lesson, you can view any errors or messages that your page generates. 
+* [Browser Network Tab](https://developer.chrome.com/docs/devtools/network/)
+    * When a modern web page loads, it rarely has all of the resources that it needs to display properly. It often needs to access images, Javascript, CSS, or other files from the web. The network tab keeps track of each request that the existing page makes, which can give you clues about other related sites or even find directories and files that aren't linked elsewhere. 
+* [Browser Application Tab](https://developer.chrome.com/docs/devtools/#application)
+    * We expect and rely on modern websites to remember who we are when visit them for the first time, or as we navigate across pages. This is only possible because websites often store data inside your browser that allow them to identify you between visits. You always want to be aware of what data this is, as it can give you a clue to finding the flag. 
+* [Website Crawlers](yeah)
+    * Ask Justin about this section
+* [HTTrack](https://www.httrack.com/)
+    * HTTrack is an example of a web scraper, a program that will start with a base URL and attempt to download and reconstruct the entire site. It will follow every link on the site recursively, enabling it to find every page that has en explicit link to it. [Cyotek Webcopy](https://www.cyotek.com/cyotek-webcopy/downloads) is another great option that includes the ability to just scan the site. There are tons of these tools out there though, so you can find the one that works best for you (if you're on a Mac good luck tho)
+* [Dirb/Gobuster](https://www.kali.org/tools/dirb/)
+    * Dirb and Gobuster are tools that can be used to brute force directory and file names using a wordlist. They essentially try to find legitimate file paths where pages are stored by sending HTTP requests using the wordlist as a directory name; if they get anything other than a 404 response then it's likely they found a valid directory. You have to be careful with these tools, 
+* [Sublist3r](yeah)
+    * Sublist3r is a tool that can help you locate subdomains of a given site. Although a brute force option (called subrute) is available, Sublist3r's real strength comes from checking search engine databases to find subdomains, which means that your target has no idea that you're scanning them. This can help you find sites that are related to your initial one, and owned by the same people, but often hosted elsewhere. 
 
-## Website Crawling
-Web crawling is when a crawler/bot/spider reads and copies the contents of every page on a website for archiving or indexing purposes. It does this by going to a page, copying it, extracting links to all the other pages, and then visits those pages and repeats the process. This automates the process so that you can browse a website's files for interesting/suspicious files. However, it's easy for websites to know if you're crawling them - they request tons of pages at an inhuman speed. In some web crawlers, there are options you can specify to throttle the requests and make you seem more legitimate (more like a real person), including spacing out requests, adding in user agents, etc. Some advanced ones will even spoof their IP address using various methods so it looks like the traffic is coming from different sources.
+## Practice Challenges
 
-### HTTrack
-While there are 1001 different web crawlers out there on the Interwebs (and it's also pretty easy to make your own), one that I will cover is [HTTrack](https://www.httrack.com/). It's free, open-source, has a CLI and GUI, and can be used on Windows or Linux. It's not the most advanced crawler, but it definitely has some nice features and it's pretty easy to use. 
+## What Next?
 
-You can [download the Windows version here](https://www.httrack.com/page/2/en/index.html), or install on Linux with the command `sudo apt-get install httrack`. 
+* Start enumerating some websites
+    * Go to some websites that you visit often, and try the passive recon (not dirb) tactics you just learned. You might be suprised what you find! 
+* Do some practice challenges
+    * Pico CTF or *** have some good web challenges you can start playing with
 
-Once HTTrack is downloaded and installed, you can start a new project like this:
-
-<img src="startingHttrack.png" width="500px">
-
-The default option is to download the entire site, but you can also set it to download that site + every other site it's linked to, update the website that was downloaded previously, or more. If you want to use some of the advanced options for HTTrack, you can click on "Set Options". Some of the options include which file types you want to download, choosing a proxy, request throttling, number of concurrent connections, user agent, and more.
-
-Once the options are set, you can choose to use a VPN if you have one, and then either save the settings to launch later, or launch it right then.
-
-This is what it looks like when you've launched an operation to clone a website:
-
-<img src="httrackProgress.png" width="500px">
-
-You can then access the website locally and view all the pages in it. 
-
-Note that large websites take up a lot of storage space, so be careful what you ask for. 
-
-### Web Scraping
-Web scraping is a subset of web crawling; web crawling copies the entire website, web scraping only goes through a subset of pages on a website, usually for a specific purpose. Scraping can copy entire pages or directories, or simply access a page and pull out pertinent information that it would like to keep.
-
-My favorite web scraping tool is the Requests library in Python, allowing you to access websites from Python in a very customizable format. We'll hopefully cover this in a later lesson. 
-
-### Example
-Looking for an example? Try scraping http://books.toscrape.com/, a website designed for scraping. See what you can find!
-
-## Dirb/DirBuster
-Dirb and DirBuster are two applications used to enumerate webpages and web directories by brute-forcing or using dictionaries. Dirb is a command line tool, while DirBuster is a Java-based GUI. Either one works, but we'll cover Dirb today.
-
-To install dirb on Linux, run these commands:
-```bash
-sudo apt update
-sudo apt install dirb
-```
-
-### Help and Examples
-Here is a screenshot of the help screen for dirb. Notice the examples at the bottom.
-<img src="dirbHelp.png">
-
-### Example
-Do you want to find a site to try this on? Try it on Justin's personal website, https://justinapplegate.me. Please note, however, that it's very easy for defenders to notice this traffic since you're sending thousands of HTTP requests to non-existent web pages per minute. 
-
-If it finds a webpage, it just gives you the response code and size of the response. If it finds a directory, it makes a note of it and then restarts the search inside of the directory again. 
-
-To install dirb, run this command:
-
-
-You can also specify extensions using the `-X` option and a dictionary to try. My favorite is `/usr/share/dirb/wordlists/common.txt`. The command to try this on Justin's website would then be 
-
-```bash
-dirb https://justinapplegate.me /usr/share/dirb/wordlists/common.txt
-```
-
-## Sublist3r
-
-[Sublister](https://www.geeksforgeeks.org/what-is-sublist3r-and-how-to-use-it/) is a tool designed in python and uses OSINT in order to enumerate subdomains of websites. It helps pen-testers in collecting and gathering subdomains for a domain which is their target. In order to fetch the accurate results, sublilster uses many search engines like Google, Yahoo, etc. and even tools like Netcraft, Virustotal, etc.
-
-
-To run Sublist3r, you will need Python installed and working on your device. After you have python working, run these linux commands to install Sublist3r:
-```bash
-git clone https://github.com/aboul3la/Sublist3r.git
-cd Sublist3r
-pip install -r requirements.txt
-```
-
-And to run the tool:
-```bash
-./sublister.py -d exampledomain.com
-```
-Here is what the output of the tool looks like:
-
-<img src="SublisterExample.jpg">
-
-Since this tool doesn't actually touch the website and only uses OSINT, there is no way for the system owner to know you are doing reconnaissance on their website. Stealthy stuff!
-
-## Authentication
+### A Note On Authentication
 Hopefully, these different techniques have shown you how *difficult* it is to hide pages on a website. This is why obfuscation isn't secure - although it's harder to find the pages, once someone finds a link to it or brute forces it, the game's over. Always rely on authentication instead of obfuscation. 
 
 Also, just in case you think they'll never your hidden webpage because it's 143 randomly-generated characters, isn't linked anywhere on the web, and isn't on your robots.txt file, there are other methods to find these pages, including extracting your search history on your browser and logging all of the "referrer" sites in your HTTP header. This means that when you visit a website, your browser will tell that new website which site you were on before. So you can be careful, but all it takes is ONE slip up and you lose.
