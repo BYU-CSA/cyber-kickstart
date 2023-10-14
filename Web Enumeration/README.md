@@ -27,8 +27,6 @@ Unless of course, we're hackers and can get around that ;)
     * When a modern web page loads, it rarely has all of the resources that it needs to display properly. It often needs to access images, Javascript, CSS, or other files from the web. The network tab keeps track of each request that the existing page makes, which can give you clues about other related sites or even find directories and files that aren't linked elsewhere. 
 * [Browser Application Tab](https://developer.chrome.com/docs/devtools/#application)
     * We expect and rely on modern websites to remember who we are when visit them for the first time, or as we navigate across pages. This is only possible because websites often store data inside your browser that allow them to identify you between visits. You always want to be aware of what data this is, as it can give you a clue to finding the flag. 
-* [Website Crawlers](yeah)
-    * Ask Justin about this section
 * [HTTrack](https://www.httrack.com/)
     * HTTrack is an example of a web scraper, a program that will start with a base URL and attempt to download and reconstruct the entire site. It will follow every link on the site recursively, enabling it to find every page that has en explicit link to it. [Cyotek Webcopy](https://www.cyotek.com/cyotek-webcopy/downloads) is another great option that includes the ability to just scan the site. There are tons of these tools out there though, so you can find the one that works best for you (if you're on a Mac good luck tho)
 * [Dirb/Gobuster](https://www.kali.org/tools/dirb/)
@@ -38,12 +36,39 @@ Unless of course, we're hackers and can get around that ;)
 
 ## Practice Challenges
 
+```md
+Insp3ct0r (picoCTF)
+--------
+Kishor Balan tipped us off that the following code may need inspection: 
+https://jupiter.challenges.picoctf.org/problem/9670/
+
+Flag format: picoCTF{flag}
+```
+
+```md
+Where are the robots? (picoCTF)
+--------
+Can you find the robots? 
+https://jupiter.challenges.picoctf.org/problem/56830/
+
+Flag format: picoCTF{flag}
+```
+
+```md
+dont-use-client-side (picoCTF)
+--------
+an you break into this super secure portal? 
+https://jupiter.challenges.picoctf.org/problem/17682/
+
+Flag format: picoCTF{flag}
+```
+
 ## What Next?
 
 * Start enumerating some websites
-    * Go to some websites that you visit often, and try the passive recon (not dirb) tactics you just learned. You might be suprised what you find! 
+    * Go to some websites that you visit often, and try the passive recon (not dirb) tactics you just learned. You might be surprised what you find! 
 * Do some practice challenges
-    * Pico CTF or *** have some good web challenges you can start playing with
+    * [picoCTF](https://picoctf.org/]) or [Hacker101 CTF](https://ctf.hacker101.com/about) have some great web challenges for you to test your skills on!
 
 ### A Note On Authentication
 Hopefully, these different techniques have shown you how *difficult* it is to hide pages on a website. This is why obfuscation isn't secure - although it's harder to find the pages, once someone finds a link to it or brute forces it, the game's over. Always rely on authentication instead of obfuscation. 
