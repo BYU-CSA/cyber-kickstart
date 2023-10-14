@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Login</title>
+</head>
+
+<body>
+    <form>
+        <p><strong>Current Location:</strong></p>
+        <p>https://insecure-website.com/products<span id="params"></span></p>
+
+        <input type="hidden" name="category" value="Gifts">
+        <input type="submit" value="See all gifts">
+    </form>
+
+        <br><br>
+
+        <p>This is the SQL query running behind the scenes:</p>
+
+        <pre style="word-wrap:normal;border:1px solid black;width:500px;padding:10px;">
+SELECT * FROM products WHERE category = '<span id="category"></span>' AND released = 1
+        </pre>
+
+        <p>This query returns all the results that meet the criteria.</p>
+
+        <textarea></textarea>
+</body>
+
+<script>
+    /*
+        This script automatically updates the SQL query based on parameters
+    */
+   var input = window.location.search;
+   document.getElementById('params').innerHTML = input;
+
+   var parameters = new URLSearchParams(input);
+   document.getElementById('category').innerHTML = parameters.get('category');
+</script>
