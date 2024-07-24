@@ -4,9 +4,9 @@ This GitHub repository is used to store lessons for CTF training group meetings 
 ## Structure
 [`friday-lessons`](./friday-lessons/): Collection of scripts, challenges, and guides used in the weekly Kickstart meetings 
 
-[`notes-dump`](./notes-dump/): A space for people to drop their unstructured notes. This is full of tips, tricks, helpful scripts, and writeups that might help with whatever challenge you're solving!
+[`notes-dump`](./notes-dump/): A space for people to drop their unstructured notes. This is full of tips, tricks, helpful scripts, and writeups that might help with whatever challenge you're solving! Put any notes that are unpolished here.
 
-[`resources`](./resources/): Various resources that might be too advanced for a single hour-long lesson. Put higher-quality writeups, step-by-step guides, links to resources, and other useful resources here.
+[`resources`](./resources/): Various resources that might be too advanced for a single hour-long lesson. Put higher-writeups, step-by-step guides, links to resources, and other useful resources here.
 
 ## Meetings
 Meetings are held each Friday from 5:00 PM - 6:00 PM MST, in room 365 in the Crabtree using the resources in [friday-lessons](./friday-lessons/). If you're a student with an interest in breaking into things, we'd love to have you join us!
