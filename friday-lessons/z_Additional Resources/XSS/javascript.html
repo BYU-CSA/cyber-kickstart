@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<head>
+    <title>XSS Practice</title>
+</head>
+
+<body>
+
+<h2>innerHTML</h2>
+<input type="text" id="text1">
+<button onclick="processText1()">Insert text</button><br><br>
+<div>Output = <span id="output-1"></span></div><br><br><br>
+
+<h2>textContent</h2>
+<input type="text" id="text2">
+<button onclick="processText2()">Insert text</button><br><br>
+<div>Output = <span id="output-2"></span></div><br><br><br>
+
+<h2>innerText</h2>
+<input type="text" id="text3">
+<button onclick="processText3()">Insert text</button><br><br>
+<div>Output = <span id="output-3"></span></div><br><br><br>
+
+</body>
+
+<script>
+
+// demonstrates innerHTML
+function processText1() {
+    let text = document.getElementById("text1").value;
+    document.getElementById("output-1").innerHTML = text;
+}
+
+// demonstrates textContent
+function processText2() {
+    let text = document.getElementById("text2").value;
+    document.getElementById("output-2").textContent = text;
+}
+
+// demonstartes innerText
+function processText3() {
+    let text = document.getElementById("text3").value;
+    document.getElementById("output-3").innerText = text;
+}
+</script>
