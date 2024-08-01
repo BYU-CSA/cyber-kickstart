@@ -3,7 +3,7 @@ You're going to need 2 things:
 - Command line with `git` installed
 - Some resources to add or ideas to edit the repository
 
-`git` is a tool that does "version management". It's a very useful tool that is worth learning. You're going to "clone" the main repository (or "repo") down, then create a "branch" with your changes, then "merge" it into the main "branch".
+`git` is a tool that does "version management". Practically everyone uses it to manage multiple people editing the same source code. You're going to "clone" the main repository (or "repo") down, then create a "branch" with your changes, "commit" your "staged" changes, "push" your commits, then "merge" it into the main "branch". If you can explain all of those terms in quotes, you'll know as much about git as your average Software Engineer.
 
 To get a command line with git on Windows, download [Git Bash](https://git-scm.com/downloads), a command line program for Windows that mimics a Linux command line. When using this program, you'll use Linux commands like `ls` and `cd` instead of Windows commands like `dir` and `chdir`. Git is packaged with this program.
 
