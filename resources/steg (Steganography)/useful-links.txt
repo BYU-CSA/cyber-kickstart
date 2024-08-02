@@ -1,0 +1,7 @@
+# Useful steg resources
+### Tools
+
+### Websites
+[Cyberchef](https://gchq.github.io/CyberChef/) - Do a lot of really useful operations on data, including convert between encodings, perform bitwise operations etc.
+
+### Learning resources

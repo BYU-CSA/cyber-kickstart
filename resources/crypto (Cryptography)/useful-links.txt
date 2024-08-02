@@ -1,0 +1,7 @@
+# Useful crypto resources
+### Tools
+
+### Websites
+[CryptoHack](https://cryptohack.org/) - Get hands on experience learning cryptography from first principles.
+
+### Learning resources
