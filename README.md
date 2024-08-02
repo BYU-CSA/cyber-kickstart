@@ -1,5 +1,7 @@
 # BYU Weekly CTF Training
-This GitHub repository is used to store lessons for CTF training group meetings held regularly at BYU in Provo.
+This GitHub repository is used to store lessons for CTF training group meetings held regularly at BYU.
+
+Make this repository better by following the instructions [here](./How-to-add-to-this-repository.md).
 
 ## Structure
 [`friday-lessons`](./friday-lessons/): Collection of scripts, challenges, and guides used in the weekly Kickstart meetings 
