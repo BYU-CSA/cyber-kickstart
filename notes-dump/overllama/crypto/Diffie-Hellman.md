@@ -1,0 +1,7 @@
+So a finite field F<sub>p</sub> is all elements less than *p* typically. If it's a multiplicative field it's all elements less than *p* where gcd(element, p) == 1
+A generator g for a finite field F<sub>p</sub> is defined as a number where g<sup>1</sup>, g<sup>2</sup>, ..., g<sup>p</sup> generates all numbers in the finite field. The total number of generators can be determined by $\phi$($\phi$(n)) where n is the composite/prime of the field. A number is not a generator if it starts to repeat numbers in its progression through exponents, since that will form a cyclic subgroup. If it starts to repeat, it will repeat all values
+
+The first step of Diffie-Hellman is to establish some prime p and some generator of its finite field, g. These must be carefully chosen to avoid special cases where the discrete log can be solved with efficient algorithms. Usually a safe prime `p = 2*q +1` is picked where the only factors of p-1 are q and 2, where q is another large prime. This protects DH from Pohlig-Hellman
+Next the user picks a prime a, calculates `A = g^a mod p`, and sends that to their counterpart
+Next, the other user picks a prime b, calculates `B = g^b mod p`
+The shared secret, then is `s = g^a^b mod p`
