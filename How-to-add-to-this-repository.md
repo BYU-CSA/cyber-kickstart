@@ -3,11 +3,11 @@ You're going to need 2 things:
 - Command line with `git` installed
 - Some resources to add or ideas to edit the repository
 
-`git` is a tool that does "version management". Practically everyone uses it to manage multiple people editing the same source code. You're going to "clone" the main repository (or "repo") down, then create a "branch" with your changes, "commit" your "staged" changes, "push" your commits, then "merge" it into the main "branch". If you can explain all of those terms in quotes, you'll know as much about git as your average Software Engineer.
+`git` is a tool that does "version management". Practically everyone uses it to manage multiple people editing the same source code. You're going to "clone" the main repository (or "repo") down, then create a "branch" with your changes, "commit" your "staged" changes, "push" your commits, then "merge" it into the main "branch". If you can explain all of those terms in quotes, you'll know as much about git as an entry level Software Engineer.
 
-To get a command line with git on Windows, download [Git Bash](https://git-scm.com/downloads), a command line program for Windows that mimics a Linux command line. When using this program, you'll use Linux commands like `ls` and `cd` instead of Windows commands like `dir` and `chdir`. Git is packaged with this program.
+To get a command line with git available on Windows, download [Git Bash](https://git-scm.com/downloads), a command line program for Windows that mimics a Linux command line. When using this program, you'll use Linux commands like `ls` and `cd` instead of Windows commands like `dir` and `chdir`. The Git command line tool is packaged with this program.
 
-1. Find a spot to clone this repository. Typically, people have a directory called "CTF" or "Cyber" where they put everything.
+1. Find a spot to clone this repository. Typically, people have a directory called "CTF" or "Cyber" on their Desktop where they put everything.
 2. In command line, navigate to the directory where you're going to clone this repository with `cd` and run `git clone https://github.com/BYU-CSA/cyber-kickstart.git`.
 3. Run `cd cyber-kickstart` to change the current directory to the repo. You are now "in" the repo. As long as you're "in" the repo, the `git` command will know that you're trying to make changes to this repo, and that it's originally hosted on github.
 4. Run `git checkout -b <branch-name>`. Make `<branch-name>` something short and descriptive preferably starting with your name, like `jake-mullins-sql-injection-resources` or `macen-bird-notes-dump`. If you're editing a lesson, it's fine to just say `cryptography-lesson-edits` or something similar.
