@@ -1,5 +1,6 @@
 # Useful rev resources
 ### Tools
+- [DogBolt](https://dogbolt.org/) - Compare Ghidra, BinaryNinja, etc. side-by-side in a web environment to see which reverse engineering tool is most suitable for the file you're trying to reverse engineering.
 
 ### Websites
 
